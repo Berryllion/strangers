@@ -1,0 +1,44 @@
+{
+  "name": "WNRS x Bumble Bizz",
+  "menu": "Bumble Bizz",
+  "crossover": "Bumble Bizz",
+  "suggested-players": "2 players",
+  "colors": {
+    "primary": {
+      "main": "#ee7547",
+      "contrastText": "#201e1f"
+    },
+    "secondary": {
+      "main": "#201e1f"
+    }
+  },
+  "levels": [
+    "Level 1 Perception",
+    "Level 2 Connection",
+    "Level 3 Reflection"
+  ],
+  "is-expension": true,
+  "level1": [
+    "Do I seem like more of a creative or analytical type? Explain.",
+    "How organized do you think my computer desktop is on a scale of 1-10?",
+    "Between the two of us, who do you think is quicker at responding to emails?"
+  ],
+  "level2": [
+    "If funding weren't an issue, what idea would you execute this year?",
+    "In the form of an elevator pitch, describe what you do for a living.",
+    "What's the most important thing you're currently putting off?",
+    "What are you better at than most people you know?",
+    "What do you need most help with currently?",
+    "What do you wish you could spend more time doing?",
+    "What professional advice would you give your younger self?",
+    "What was the most fulfilling moment of your career this past year?",
+    "What career low has taught you the most?",
+    "What part of your job leaves you most energized? And the most drained?",
+    "Wild Card Both players write down your number one goal for the next month. Exchange."
+  ],
+  "level3": [
+    "How do our skillsets complement each other?",
+    "Wild Card Write down a podcast your partner needs to listen to. Exchange.",
+    "Wild Card Write a motivational reminder to your partner. Fold and exchange. Open when needed. (Both players.)"
+  ]
+}

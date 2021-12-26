@@ -1,0 +1,49 @@
+{
+  "name": "WNRS x Bumble BFF",
+  "menu": "Bumble BFF",
+  "crossover": "Bumble BFF",
+  "suggested-players": "2 players",
+  "colors": {
+    "primary": {
+      "main": "#4098bc",
+      "contrastText": "#201e1f"
+    },
+    "secondary": {
+      "main": "#201e1f"
+    }
+  },
+  "levels": [
+    "Level 1 Perception",
+    "Level 2 Connection",
+    "Level 3 Reflection"
+  ],
+  "is-expension": true,
+  "back-description": [
+    "Bumble BFF"
+  ],
+  "level1": [
+    "What about my Bumble profile made you swipe right?",
+    "What do you think I was like in high school?"
+  ],
+  "level2": [
+    "What are you passionate about?",
+    "How would you describe your ex in three words? How would they describe you?",
+    "How's your heart today? Really?",
+    "What type of social situation makes you feel the most awkward?",
+    "What takes someone from a friend to a best friend?",
+    "What have you let go of this year that's made the most positive change?",
+    "What question are you trying to answer in your life right now?",
+    "What's the nicest thing you can remember doing for a friend? Permission to brag.",
+    "When was the last time someone made you feel special on your birthday?",
+    "Has a quote ever changed your worldview?",
+
+    "Wild Card Think of a movie that always makes you cry. On the count of three, say your answers out loud. (Both players)",
+    "Wild Card Illustrate your current love life. 30 seconds. Compare.",
+    "Wild Card Do you need advice on anything in your life right now? Permission to vent. (Both players)",
+    "Wild Card Write down the three most important qualities in a BFF. One minute. Compare. (Both players.)"
+  ],
+  "level3": [
+    "What part of my personality wasn't showcased online?",
+    "What do you admire most about me?"
+  ]
+}

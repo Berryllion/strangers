@@ -1,0 +1,51 @@
+{
+  "name": "Sneaky Link Edition",
+  "menu": "Sneaky Link",
+  "suggested-players": "2 players",
+  "colors": {
+    "primary": {
+      "main": "#000000",
+      "contrastText": "#ffffff"
+    },
+    "secondary": {
+      "main": "#000000"
+    }
+  },
+  "levels": [
+    "Level 1 👀",
+    "Level 2 🤪",
+    "Level 3 💦"
+  ],
+  "is-expension": true,
+  "back-description": [
+    "Come curious, leave connected."
+  ],
+  "instructions": [
+    "This is a questions game to play with your sneaky link. there are only 2 rules:",
+    "1.) be honest",
+    "2.) the person who sent the last “u up?” text goes first"
+  ],
+  "level1": [
+    "What did you think I would be like in bed? What am I actually like?",
+    "What would you assume about me based off my social media?"
+  ],
+  "level2": [
+    "What's my name in your contacts?",
+    "What's the best text you could receive from me?",
+    "What is the latest time you would respond to a \"u up?\" text from me?",
+    "My place or your place?",
+    "When do you think about me most?",
+    "What's something about you that might surprise me?",
+    "What am I good at? (Describe in detail)",
+    "What is your current go-to late night snack?",
+    "When I show up, what outfit do you like to see me in?",
+
+    "Wild Card What's your favorite part of my body? Prove it.",
+    "Wild Card If we had to try something new tonight, what would it be? Bonus: do it."
+  ],
+  "level3": [
+    "Why do you keep coming back?",
+
+    "Wild Card Come up with a secret code word/phrase to text each other."
+  ]
+}

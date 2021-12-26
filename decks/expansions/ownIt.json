@@ -1,0 +1,58 @@
+{
+  "name": "WNRS x DVF Own It Expansion Pack",
+  "menu": "Own It",
+  "crossover": "DVF",
+  "suggested-players": "2+ players",
+  "colors": {
+    "primary": {
+      "main": "#c10016",
+      "contrastText": "#ffffff"
+    },
+    "secondary": {
+      "main": "#181818"
+    }
+  },
+  "levels": [
+    "Own It"
+  ],
+  "is-expension": true,
+  "back-description": [
+    "When you own who you are, no one else can."
+  ],
+  "instructions": [
+    "What if your biggest insecurities were your greatest strengths? If you own it. They are!",
+    "To \"own it\" is to accept the truth and deal with it, however unpleasant it may be. We're Not Really Strangers and DVF came together to create an expansion pack all about owning the person we are today and the person we are becoming.",
+    "To play, journal your answers or explore this deck with a loved one who's willing to dig deep.",
+    "Owning who we are is the best thing we can do for ourselves and the people in our lives.",
+    "Ready?"
+  ],
+  "level1": [
+    "When was the last time you felt complete [#af2637](zen)? Who were you with? Where were you? What were you doing?",
+    "How would you describe your relationship with [#d0af3a](yourself) in one word?",
+    "What is your [#275835](x-factor)? Permission to brag.",
+    "Who is a [#c66532](woman) in your life that inspires you to be a better person? Why does she come to mind? (Send her a thank you)",
+    "What still feels [#c97986](vulnerable) in your life? What does owning it look like for you?",
+    "Who from your past would you want to [#5f86b5](reunite) with? What would you ask them?",
+    "What's the hardest [#275835](truth) you've had to own this past year? What has owning it taught you?",
+    "How has your definition of [#d0af3a](success) evolved over time? What is your definition of it today? Get specific.",
+    "Who in your life do you want to build a deeper [#af2637](relationship) with? (Be direct and tell them)",
+    "What [#5f86b5](question) have you avoided asking someone? What question have you avoided asking yourself?",
+    "What area of your life have you made the most [#c97986](progress) in recently? Get specific. Take a moment to congratulate yourself.",
+    "What part(s) of yourself have you been minimizing that you're ready to finally own? Permission to [#c97986](own it).",
+    "Who do you feel [#d0af3a](misunderstood) by? What do you wish they would come to understand?",
+    "What lesson in [#275835](love) took you the longest to learn?",
+    "What act of [#c66532](kindness) from a stranger will you never forget?",
+    "What has brought you the most unexpected [#c97986](joy) recently?",
+    "What has your [#af2637](heart) been telling you that you've been ignoring?",
+    "What have you not [#d0af3a](forgiven) that hurts you the most?",
+    "What have you [#c66532](envied) in the past that you can laugh at now?",
+    "What [#c97986](door) are you most grateful for closing that felt like the end of the world at the time? What did it open for you?",
+    "What do you wish you had the [#af2637](courage) to do? To say?",
+    "What [#5f86b5](blame) have you been placing on someone else that you can take some accountability for?",
+    "What have you become newly [#d0af3a](aware) of within yourself recently? Get specific.",
+
+    "Wild Card [#5f86b5](Set an intention for today, this month and this year. Write it out.)",
+    "Wild Card [#af2637](Spend at least 5 minutes in nature today. Be still and observe. What did you notice?)",
+    "Wild Card [#275835](Write down 3 things you're most grateful for in this present moment. Big or small.)"
+  ]
+}

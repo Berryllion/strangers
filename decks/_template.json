@@ -1,0 +1,39 @@
+{
+  "name": "",
+  "menu": "",
+  "edition": "",
+  "suggested-players": "",
+  "colors": {
+    "primary": {
+      "main": "#c10016",
+      "contrastText": "#ffffff"
+    },
+    "secondary": {
+      "main": "#c10016"
+    }
+  },
+  "levels": [
+    "Level 1 Perception",
+    "Level 2 Connection",
+    "Level 3 Reflection"
+  ],
+  "is-expension": true,
+  "back-description": [
+
+  ],
+  "instructions": [
+
+  ],
+  "level1": [
+
+  ],
+  "level2": [
+
+  ],
+  "level3": [
+
+  ],
+  "final-card": [
+
+  ]
+}

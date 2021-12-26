@@ -1,0 +1,56 @@
+{
+  "name": "Voting Edition",
+  "menu": "Voting",
+  "edition": "Voting Edition",
+  "suggested-players": "2+ players",
+  "colors": {
+    "primary": {
+      "main": "#272c6c",
+      "contrastText": "#f6f6f6"
+    },
+    "secondary": {
+      "main": "#181818"
+    }
+  },
+  "levels": [
+    "Voting"
+  ],
+  "is-expension": false,
+  "back-description": [
+    "Voting Edition"
+  ],
+  "instructions": [
+    "We all know that it's important to vote, but we wanted to dig a little deeper. These questions are meant to explore not only our knowledge of politics and the process of voting but also our limiting beliefs. Not just why we're ready to vote, but why we may be on the fence.",
+    "And finally some tools, resources, and prompts to go beyond just voting, but to vote informed. To play, find a friend or loved one wanting to explore an important topic that is often messier than a check on the ballot.",
+    "Ready?",
+    "Disclaimer: It's important to have open conversations with others, even when we don't agree. However, make sure to explore these questions with people you feel safe with. Political conversations can get charged. Practice healthy boundaries and step away from any conversation that doesn't show mutual respect."
+  ],
+  "level1": [
+    "How did your upbringing shape your views on politics? How has it evolved over time?",
+    "Do you hold any limiting beliefs when it comes to voting? If so, what are they?",
+    "If you could enact one policy today, what would it be and why?",
+    "When was the first time you voted? What got you to the voting booth?",
+    "Have you ever had the opportunity to vote and not taken it? If so, why?",
+    "If you could ask each presidential candidate one question and get and honest answer, what would you ask?",
+    "When was the last time you changed your mind about something politically? What prompted your shift in perspective?",
+    "What's one thing you feel uninformed about politically that you'd like to gather more information on? What's one small step you can take towards gaining more knowledge on this topic?",
+    "What boundaries feel important for you to set in the conversation surrounding politics?",
+    "I do / don't vote because ________.",
+    "What do most people assume about your political views / beliefs? How accurate are those assumptions?",
+    "What do you wish the people from the other side of the political spectrum understood about your POV? What do you wish you understood about theirs?",
+    "The world needs more ________, and less _________.",
+    "How has social media influenced your political views, if at all?",
+    "How do you want to use your social media platform (big or small) to enact change that feels authentic to you?",
+    "What biases can you recognize that you have regarding your current political stance?",
+    "Where do you get the majority of your voting information? How have you checked it's credibility? (See resources key to find various fact-checking websites)",
+    "Is there a political view you have that you feel too afraid to admit publicly?",
+    "What's one thing you know about the voting process today, that you didn't in the previous election?",
+    "If the election doesn't go your way, how will you or your loved one's lives be affected? Are you informed about the potential impact your vote / lack thereof will have?",
+    "How would you describe the imporance of voting to your younger self?",
+    "Was there a moment recently that drastically shaped your political ideology? If so, what was it?",
+    "Do you have open conversations with people who hold differing political views as you? Why or why not?",
+
+    "Reminder Normalize saying I don't have enough information on this topic to form an opinion just yet.",
+    "Reminder Listen to learn even when you don't agree."
+  ]
+}

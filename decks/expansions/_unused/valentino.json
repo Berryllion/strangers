@@ -1,0 +1,47 @@
+{
+  "name": "RS x Valentin",
+  "menu": "Valentino",
+  "crossover": "Valentino",
+  "suggested-players": "2+ players",
+  "colors": {
+    "primary": {
+      "main": "#4e1214",
+      "contrastText": "#ffffff"
+    },
+    "secondary": {
+      "main": "#4e1214"
+    }
+  },
+  "levels": [
+    "Valentino"
+  ],
+  "is-expension": true,
+  "level1": [
+    "What have you witnessed recently that has given you hope for humanity in any big or small way?",
+    "What limiting belief is holding you back the most right now?",
+    "What have you overcome this year that you weren't sure you could?",
+    "When was the last time you felt truly understood by somebody? Who was it? What did they understand?",
+    "What has this year taught you about yourself? Good and bad.",
+    "Asking for help is a strength not a weakness. What do you need help with?",
+    "What has your negative self-talk sounded like recently? Replace it with an affirmation.",
+    "Who in your life can you have more empathy towards? What's getting in the way of that?",
+    "What are you judging yourself too harshly for? How can you show more empathy towards yourself?",
+    "What was the last lie you told yourself?",
+    "What are you working through that others don't see?",
+    "Is there someone in your life you feel misunderstood by? What do you wish they would understand?",
+    "What are you overthinking right now? Or who?",
+    "How have you neglected yourself recently? What's one thing you can do to make it up to yourself this week, big or small?",
+    "What \"failure\" taught you the most this year? What did it teach you?",
+    "What are you holding onto that are hurting you the most? What's one small step you can take towards letting it go?",
+    "Who deserves more of your time? How can you show up for them?",
+    "What are you still trying to understand about yourself?",
+    "What is the hardest thing for you to understand about yourself?",
+    "What do you give in too much energy to? What is that at the expense of?",
+
+    "Wild Card What would you tell yourself one year ago today? Write it out.",
+    "Wild Card Write down one thing you want to forgive yourself for. Find the lesson and let it go.",
+    "Wild Card Who in your life deserves the biggest thank you? Let them know now.",
+    "Wild Card Both players write down a compliment to one another. Fold and exchange. Open only when you two have parted.",
+    "Reminder Have more empathy (For yourself too)"
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "name": "Race and Privilege: An Overdue Conversation",
+  "menu": "Race & Privilege",
+  "edition": "Race & Privilege Edition",
+  "suggested-players": "2+ players",
+  "colors": {
+    "primary": {
+      "main": "#181818",
+      "contrastText": "#ffffff"
+    },
+    "secondary": {
+      "main": "#181818"
+    }
+  },
+  "levels": [
+    "Level 1 Perception",
+    "Level 2 Connection",
+    "Level 3 Reflection"
+  ],
+  "is-expension": false,
+  "back-description": [
+    "If a conversation is hard, it's probably the one worth having."
+  ],
+  "instructions": [
+    "This conversation isn't easy.",
+    "Remember, not everyone will be on the same level of understanding as you, and that's okay.",
+    "This conversation doesn't end after one sitting, or after a wave of outrage online. It is a lifelong conversation that starts with ourselves.",
+    "Ready?"
+  ],
+  "how-to-play": [
+     "Find a parner with an open heart and mind. This person can have completely different or very similar viewpoints. Alternate asking and answering each question with your partner(s).",
+    "Remember, the more you have in your toolkit the better you can be at sharing your views with someone else. We've provided resources throughout this PDF to help fill that toolkit. Review definitions together before beginning the game."
+  ],
+  "level1": [
+    "What privileges do you think I have? Explain.",
+    "What stereotypes do you think have been made about you, if any?",
+    "Wild Card Write down your biggest fear entering this conversation about race. 1 minute. Compare."
+  ],
+  "level2": [
+    "In your day to day life, how often do you think about race / the color of your own skin? Why do you think that is?",
+    "What qualities do you associate with a good listener?",
+    "Has your family ever said something you deeply disagreed with regarding the topic of race / racism? How did you respond?",
+    "How do you feel about cancel culture in regards to race / racism? What role does it play? How does it help? How does it hurt?",
+    "On a scale of 1-10 how would you rate your current knowledge of our nation's history regarding slavery and systemic racism? What can you do to help raise your knowledge by 1 point?",
+    "When was the last time you had a shift in perspective regarding the topic of race / racism? How did that shift occur for you?",
+    "What's an unpopular opinion you hold regarding race / racism that you feel too afraid to voice? Have you ever challenged that opinion?",
+    "What did the people that raised you teach you about race? Directly or indirectly?",
+    "Permission to sound uninformed: What have you always wondered but felt too afraid to ask about race / racism?",
+    "Have you ever experienced racism in your friend / peer group? Did you call it out? Why or why not?",
+    "What was your first memory realizing that race existed?",
+    "Have you ever had to unfriend or create a boundary towards someone you love because of a disconnect concerning the topic of race / racism?",
+    "What did you grow up believing \"beautiful\" looked like? Where did that come from? How has it evolved?",
+    "What do you feel when you hear \"Black lives matter\"? \"All lives matter\"?",
+    "What has been your personal experience with police? Why do you think that is? When you get pulled over how safe do you feel?",
+    "Have you ever been called out for saying something insensitive regarding race? How did it make you feel? Did it change you? Why or why not?",
+    "How do you define \"privilege\"? Articulate what privileges you think you have.",
+
+    "Reminder Be open to changing your mind when receiving new information, especially if it makes you uncomfortable."
+  ],
+  "level3": [
+    "How can you be a better listener to things you don't understand?",
+    "What do you hope future generations understand about race? What is our role in helping them understand?",
+    "How can you turn your privilege into positive change with your voice and resources?",
+    "Wild Card Write down one lesson this conversation taught you. Both players. Compare."
+  ]
+}

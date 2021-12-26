@@ -1,0 +1,53 @@
+{
+  "name": "Quarantine Edition",
+  "menu": "Quarantine",
+  "edition": "Quarantine Edition",
+  "suggested-players": "2+ players",
+  "colors": {
+    "primary": {
+      "main": "#c10016",
+      "contrastText": "#ffffff"
+    },
+    "secondary": {
+      "main": "#c10016"
+    }
+  },
+  "levels": [
+    "Level 1 Perception",
+    "Level 2 Connection",
+    "Level 3 Reflection",
+    "Final Card"
+  ],
+  "is-expension": false,
+  "back-description": [
+    "Physically distant, emotionally Connected."
+  ],
+  "level1": [
+    "What time do you think I've been waking up these days?",
+    "What do you think I've been binge watching lately?",
+    "Do you think I'm mainly cooking or ordering?",
+    "What do you think has been my go to snack during this time?"
+  ],
+  "level2": [
+    "When quarantining is behind us, what change do you want to make in your day to day life if any?",
+    "What can you create during this time with exactly what you have? Big or small.",
+    "What's been the kindest thing someone has done for you during this time? What's been the kindest thing you've done for yourself?",
+    "What would feel best to fully accept in this current moment?",
+    "What are you most excited for today? Big or small?",
+    "What has been the hardest part of all this for you? Permission to vent.",
+    "What movie do you wish you'd never seen so you can watch it for the first time during quarantine?",
+
+    "Wild Card Staring contest. First to smile must reveal what their kitchen looks like in the current moment.",
+    "Wild Card Share your most played song at the moment",
+    "Wild Card Share your screen time. Both players."
+  ],
+  "level3": [
+    "If you made a playlist for me, what 3 songs would be on it?",
+    "What do I need to watch as soon as I have the time?",
+    "How can I best be there for you during this chapter?",
+    "Wild Card Who's been on your mind lately? Send them a text letting them know you're thinking of them. Both players."
+  ],
+  "final-card": [
+    "Each player write a virtual message to your partner. Press send once you two have hung up."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "name": "WNRS x Bumble Date",
+  "menu": "Bumble Date",
+  "crossover": "Bumble Date",
+  "suggested-players": "2 players",
+  "colors": {
+    "primary": {
+      "main": "#F8CB5E",
+      "contrastText": "#ffffff"
+    },
+    "secondary": {
+      "main": "#201e1f"
+    }
+  },
+  "levels": [
+    "Level 1 Perception",
+    "Level 2 Connection",
+    "Level 3 Reflection"
+  ],
+  "is-expension": true,
+  "level1": [
+    "What was your first impression of me on Bumble vs. IRL?",
+    "How would you describe what you think my type is in three words?",
+    "What did you think about my first message?",
+    "Between the two of us, Who seems like the better texter? Explain."
+  ],
+  "level2": [
+    "What dating advice would you give your younger self?",
+    "How old do you feel, emotionally?",
+    "Will I find your ex on your Instagram feed? Why or why not?",
+    "What's the most embarrassing thing that's ever happened to you on a date?",
+    "Finish the sentence: Dating is __________. (Both Players)",
+    "What did the people who raised you teach you about love?",
+    "Describe your perfect date.",
+    "What has being single taught you about yourself, if anything?",
+    "What's your least favorite question to be asked on a date? What do you wish you were asked more?",
+    "What are you passionate about?",
+    "What are you not giving enough time to, currently?",
+    "When's the last time you surprised yourself?",
+    "What about my Bumble profile made you swipe right?",
+    "Admit something: What could you have done better in your previous relationship(s)?",
+    "Admit something: Is there an image of yourself you try to project on a first date that you wish you could let go of?",
+    "Wild Card Write down a dating pet peeve. (30 seconds) Compare.",
+    "Wild Card Write down the three most important things to you in a relationship. (30 seconds) Compare.",
+    "Wild Card Create your own question."
+  ],
+  "level3": [
+    "What's the most attractive quality about me that isn't physical?",
+    "How accurately did my Bumble profile reflect who I am IRL?",
+    "Wild Card Based on what you've learned, rewrite each other's Bumble bios. (30 seconds) Compare."
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "name": "WNRS x Red Table Talk Edition",
+  "menu": "Inner Circle",
+  "edition": "Inner Circle Expansion Pack",
+  "crossover": "Red Table Talk",
+  "suggested-players": "2+ players",
+  "colors": {
+    "primary": {
+      "main": "#c10016",
+      "contrastText": "#ffffff"
+    },
+    "secondary": {
+      "main": "#c10016"
+    }
+  },
+  "levels": [
+    "Level 1 Perception",
+    "Level 2 Connection",
+    "Level 3 Reflection",
+    "Final Card"
+  ],
+  "is-expension": true,
+  "back-description": [
+    "There's always another layer to anyone you think you know."
+  ],
+  "level1": [
+    "What do you think I'm most sensitive to?",
+    "What do you think my main love language is?"
+  ],
+  "level2": [
+    "What's the hardest truth you had to face this past year?",
+    "What's brought you the most unexpected joy recently?",
+    "Who in your life do you feel you can be most vulnerable with? Explain.",
+    "Have I ever challenged your worldview? How so?",
+    "What is a moment in our relationship that you felt undeniably loved?",
+    "How can I add 1% more happiness to your life?",
+    "A perfect day together would be _________.",
+    "What's the most fun you can remember having with me recently?",
+    "How can I best support you in this chapter in your life?",
+    "What's a feeling you're uncomfortable sharing with me?",
+    "What are you currently working through that I don't see?",
+    "When's the last time you felt lucky to be you?",
+    "When's the last time I surprised you?",
+    "When was the last time you felt most yourself?",
+
+    "Wild Card Sing your favorite song lyrics you can think of off the top of your head. Both players.",
+    "Wild Card Ask me something you think is off limits. Both players.",
+    "Wild Card Draw your favorite memory with me. Both players. Compare.",
+    "Wild Card Set an intention for this next week. Stick to it. (Both players)",
+    "Wild Card Finish the sentence: When I'm hurt I _________. Both players."
+  ],
+  "level3": [
+    "What are you proudest of me for?",
+    "What's something we should celebrate together?",
+    "You've shown me _________ about myself.",
+    "Wild Card Finish the sentence: Thank you for _________. Both players."
+  ]
+}
