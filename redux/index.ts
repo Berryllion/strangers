@@ -48,7 +48,9 @@ export interface ReduxState {
         deck: string,
         card: string,
       }>,
-    }
+    },
+    currentCard: number,
+    currentPlayer: number,
   },
   theme: {
     currentTheme: Object,
@@ -95,7 +97,9 @@ export const initialState: ReduxState = {
       level2: [],
       level3: [],
       finalCard: [],
-    }
+    },
+    currentCard: 0,
+    currentPlayer: 0,
   },
   theme: {
     currentTheme: redTheme,

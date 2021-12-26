@@ -8,7 +8,7 @@ import { ChevronRight as ChevronRightIcon } from 'react-feather';
 import Main from "../../designSystem/Main";
 import Error from "../../designSystem/Error";
 import { ReduxState } from "../../redux";
-import { SET_CARDS_AVAILABLE, SET_GAME_LEVEL } from "../../redux/actions/game";
+import { SET_CARDS_AVAILABLE, SET_CURRENT_CARD, SET_CURRENT_PLAYER, SET_GAME_LEVEL } from "../../redux/actions/game";
 import { getWindowResize, useClickOutside } from "../../utils/hooks";
 import Navigation from "./Navigation";
 import Card from "./Card";
@@ -88,8 +88,6 @@ const Home = () => {
   const [changingLevel, setChangingLevel] = useState(false);
   const [readingInstructions, setReadingInstructions] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
-  const [currentCard, setCurrentCard] = useState(0);
-  const [currentPlayer, setCurrentPlayer] = useState(0);
 
   const selectedDecks = decks.selected;
   const decksAvailable = selectedDecks.map(d => (
@@ -113,7 +111,22 @@ const Home = () => {
     });
   }
 
+  const setCurrentCard = (c: number) => {
+    dispatch({
+      type: SET_CURRENT_CARD,
+      payload: c,
+    });
+  }
+  const setCurrentPlayer = (p: number) => {
+    dispatch({
+      type: SET_CURRENT_PLAYER,
+      payload: p,
+    });
+  }
+
   const currentLevel = game.level;
+  const currentCard = game.currentCard;
+  const currentPlayer = game.currentPlayer;
   const nbLevels = calculateGameLevelsAvailable();
   const nbLevelArray = [...Array(nbLevels).keys()];
   const currentLevelAttribute = currentLevel < 3
@@ -186,17 +199,15 @@ const Home = () => {
   }
 
   useEffect(() => {
-    const allCards = getCardsAvailable();
+    if (decksAvailable.length && !game.cards.level1.length) {
+      const allCards = getCardsAvailable();
 
-    dispatch({
-      type: SET_CARDS_AVAILABLE,
-      payload: allCards,
-    });
-  }, []);
-
-  useEffect(() => {
-    setCurrentCard(0);
-  }, [currentLevel]);
+      dispatch({
+        type: SET_CARDS_AVAILABLE,
+        payload: allCards,
+      });
+    }
+  }, [decksAvailable]);
 
   // TODO: debounce screen resize
   useClickOutside(menuRef, setShowMenu);
@@ -268,16 +279,16 @@ const Home = () => {
           </div>
         </GameInfo>
 
+        <InstructionsModal
+          readingInstructions={readingInstructions}
+          setReadingInstructions={setReadingInstructions}
+        />
         <LevelModal
           changingLevel={changingLevel}
           setChangingLevel={setChangingLevel}
           nbLevelArray={nbLevelArray}
           currentLevel={currentLevel}
           setLevel={setLevel}
-        />
-        <InstructionsModal
-          readingInstructions={readingInstructions}
-          setReadingInstructions={setReadingInstructions}
         />
       </StyledMain>
     </>

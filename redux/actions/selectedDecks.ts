@@ -13,6 +13,7 @@ export type Actions = SetDecksAction;
 
 /* Functions */
 export function setDecks(state: ReduxState, action: SetDecksAction): ReduxState {
+  sessionStorage.setItem('decks', JSON.stringify(action.payload));
   return {
     ...state,
     decks: {

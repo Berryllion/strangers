@@ -13,6 +13,7 @@ export type Actions = SetPlayersAction;
 
 /* Functions */
 export function setPlayers(state: ReduxState, action: SetPlayersAction): ReduxState {
+  sessionStorage.setItem('players', JSON.stringify(action.payload));
   return {
     ...state,
     players: action.payload,

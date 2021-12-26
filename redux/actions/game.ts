@@ -4,6 +4,8 @@ import { ReduxState } from "..";
 export const SET_GAME_LEVEL = 'SET_GAME_LEVEL';
 export const SET_GAME_LEVELS_AVAILABLE = 'SET_GAME_LEVELS_AVAILABLE';
 export const SET_CARDS_AVAILABLE = 'SET_CARDS_AVAILABLE';
+export const SET_CURRENT_CARD = 'SET_CURRENT_CARD';
+export const SET_CURRENT_PLAYER = 'SET_CURRENT_PLAYER';
 
 /* Types */
 export interface SetGameAction {
@@ -35,17 +37,27 @@ export interface SetCardsAvailableAction {
       }>,
   };
 }
+export interface SetCurrentCardAction {
+  type: typeof SET_CURRENT_CARD;
+  payload: number;
+}
+export interface SetCurrentPlayerAction {
+  type: typeof SET_CURRENT_CARD;
+  payload: number;
+}
 
 export type Actions = SetGameAction | SetGameLevelsAvailableAction |
-  SetCardsAvailableAction;
+  SetCardsAvailableAction | SetCurrentCardAction | SetCurrentPlayerAction;
 
 /* Functions */
 export function setGameLevel(state: ReduxState, action: SetGameAction): ReduxState {
+  sessionStorage.setItem('level', JSON.stringify(action.payload));
   return {
     ...state,
     game: {
       ...state.game,
       level: action.payload,
+      currentCard: 0,
     },
   };
 }
@@ -58,13 +70,35 @@ export function setGameLevelsAvailable(state: ReduxState, action: SetGameLevelsA
     },
   };
 }
-export function SetCardsAvailable(state: ReduxState, action: SetCardsAvailableAction): ReduxState {
+export function setCardsAvailable(state: ReduxState, action: SetCardsAvailableAction): ReduxState {
+  sessionStorage.setItem('cards', JSON.stringify(action.payload));
   return {
     ...state,
     game: {
       ...state.game,
       cards: action.payload,
     },
+  };
+}
+
+export function setCurrentCard(state: ReduxState, action: SetCurrentCardAction): ReduxState {
+  sessionStorage.setItem("currentCard", action.payload.toString());
+  return {
+    ...state,
+    game: {
+      ...state.game,
+      currentCard: action.payload,
+    }
+  };
+}
+export function setCurrentPlayer(state: ReduxState, action: SetCurrentPlayerAction): ReduxState {
+  sessionStorage.setItem("currentPlayer", action.payload.toString());
+  return {
+    ...state,
+    game: {
+      ...state.game,
+      currentPlayer: action.payload,
+    }
   };
 }
 
@@ -80,6 +114,14 @@ export const dispatches = [
   },
   {
     action: SET_CARDS_AVAILABLE,
-    function: SetCardsAvailable,
+    function: setCardsAvailable,
   },
+  {
+    action: SET_CURRENT_CARD,
+    function: setCurrentCard,
+  },
+  {
+    action: SET_CURRENT_PLAYER,
+    function: setCurrentPlayer
+  }
 ];

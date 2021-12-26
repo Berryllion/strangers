@@ -9,6 +9,7 @@ import Error from "../../designSystem/Error";
 import { Button } from "../../designSystem/input/Button";
 import { ReduxState } from "../../redux";
 import { SET_SELECTED_DECKS } from "../../redux/actions/selectedDecks";
+import { SET_CARDS_AVAILABLE } from "../../redux/actions/game";
 
 const StyledMain = styled(Main)`
   position: relative;
@@ -92,6 +93,15 @@ const Home = () => {
       type: SET_SELECTED_DECKS,
       payload: selectedDecks,
     });
+    dispatch({
+      type: SET_CARDS_AVAILABLE,
+      payload: {
+        level1: [],
+        level2: [],
+        level3: [],
+        finalCard: [],
+      }
+    })
     router.push("/play");
   }
 
