@@ -14,7 +14,7 @@ const Home = () => {
         <title>{"Accueil"}</title>
       </Head>
       <Main>
-        <h2>We're Not Really Strangers</h2>
+        <h2>Strangers</h2>
         <p>Three carefully crafted levels of questions and wildcards that allow you to deepen your existing relationships and create new ones.</p>
         <p>Ready?</p>
         <ContinueButton transparent noPadding type="button">
