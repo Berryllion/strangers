@@ -6,15 +6,14 @@ import { ChevronLeft as ChevronLeftIcon } from 'react-feather';
 import { ChevronRight as ChevronRightIcon } from 'react-feather';
 
 import Main from "../../designSystem/Main";
-import Modal from "../../designSystem/Modal";
 import Error from "../../designSystem/Error";
-import { Button } from "../../designSystem/input/Button";
 import { ReduxState } from "../../redux";
 import { SET_CARDS_AVAILABLE, SET_GAME_LEVEL } from "../../redux/actions/game";
 import { getWindowResize, useClickOutside } from "../../utils/hooks";
 import Navigation from "./Navigation";
 import Card from "./Card";
 import LevelModal from "./LevelModal";
+import InstructionsModal from "./InstructionsModal";
 
 const StyledMain = styled(Main)`
   padding: 0;
@@ -87,6 +86,7 @@ const Home = () => {
   const { width } = getWindowResize();
 
   const [changingLevel, setChangingLevel] = useState(false);
+  const [readingInstructions, setReadingInstructions] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
   const [currentCard, setCurrentCard] = useState(0);
   const [currentPlayer, setCurrentPlayer] = useState(0);
@@ -227,6 +227,7 @@ const Home = () => {
       <Navigation
         showMenu={showMenu}
         setChangingLevel={setChangingLevel}
+        setReadingInstructions={setReadingInstructions}
         setShowMenu={setShowMenu}
       />
 
@@ -273,6 +274,10 @@ const Home = () => {
           nbLevelArray={nbLevelArray}
           currentLevel={currentLevel}
           setLevel={setLevel}
+        />
+        <InstructionsModal
+          readingInstructions={readingInstructions}
+          setReadingInstructions={setReadingInstructions}
         />
       </StyledMain>
     </>

@@ -65,7 +65,12 @@ const NavigationLinks = styled.div`
   }
 `;
 
-const Navigation = ({ showMenu, setChangingLevel, setShowMenu }) => {
+const Navigation = ({
+  showMenu,
+  setChangingLevel,
+  setShowMenu,
+  setReadingInstructions
+}) => {
   const router = useRouter();
 
   return (
@@ -76,7 +81,7 @@ const Navigation = ({ showMenu, setChangingLevel, setShowMenu }) => {
       <div style={{ flexGrow: 1 }} />
       {showMenu &&
       <NavigationLinks>
-        <Button transparent>Instructions</Button>
+        <Button transparent onClick={() => setReadingInstructions(true)}>Instructions</Button>
         <div className="separator">/</div>
         <Button transparent onClick={() => setChangingLevel(true)}>
           Change level

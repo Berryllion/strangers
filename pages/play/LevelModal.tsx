@@ -16,6 +16,12 @@ const LevelsButton = styled(Button)<{ selected: boolean }>`
   }
 `;
 
+const Container = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+`;
+
 const LevelModal = ({
   changingLevel,
   setChangingLevel,
@@ -27,17 +33,19 @@ const LevelModal = ({
     <>
       {changingLevel && (
         <Modal onClose={() => setChangingLevel(false)}>
-          {nbLevelArray.map(nb => (
-            <LevelsButton
-              selected={nb === currentLevel}
-              key={nb}
-              onClick={() => setLevel(nb)}
-            >
-              {nb !== 3
-              ? <>Level {nb + 1}</>
-              : "Final Card"}
-            </LevelsButton>
-          ))}
+          <Container>
+            {nbLevelArray.map(nb => (
+              <LevelsButton
+                selected={nb === currentLevel}
+                key={nb}
+                onClick={() => setLevel(nb)}
+              >
+                {nb !== 3
+                ? <>Level {nb + 1}</>
+                : "Final Card"}
+              </LevelsButton>
+            ))}
+          </Container>
         </Modal>
       )}
     </>

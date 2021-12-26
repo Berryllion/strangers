@@ -1,5 +1,7 @@
 import { constants } from 'http2';
+import { useRef } from 'react';
 import styled from 'styled-components';
+import { useClickOutside } from '../utils/hooks';
 
 import { Button } from './input/Button';
 
@@ -45,13 +47,9 @@ const Content = styled.div`
   background-color: var(--primary);
   color: #fff;
   margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 5rem 0;
+  padding: 5rem;
   width: 50%;
-  height: auto;
+  overflow: auto;
 
   @media(max-width: 640px) {
     padding: 8%;
@@ -63,9 +61,13 @@ const Modal = ({
   children,
   onClose,
 }: ModalProps) => {
+  const modalContentRef = useRef(null);
+
+  useClickOutside(modalContentRef, onClose);
+
   return (
     <Overlay>
-      <Content>
+      <Content ref={modalContentRef}>
         <CloseButtonContainer onClick={onClose}>
           <Button transparent>
             x
