@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import styled from "styled-components";
 import Head from "next/head";
+import {
+  Plus as PlusIcon,
+  X as XIcon,
+} from "react-feather";
 
 import Main from "../../designSystem/Main";
 import Spacer from "../../designSystem/Spacer";
@@ -26,10 +30,15 @@ const PlayerContainer = styled.div`
   font-size: 1.2rem;
   padding: 1rem 0;
 
-  > *:first-child {
+  > span:first-child {
+    font-weight: bold;
     margin: 0;
     margin-right: 1.5rem;
   }
+`;
+
+const Form = styled.form`
+  display: flex;
 `;
 
 const Players = () => {
@@ -86,7 +95,7 @@ const Players = () => {
         <Spacer height="1.5rem" />
         {players.length != 0 && players.map((player, i) => (
           <PlayerContainer key={player}>
-            <b>{i + 1}.</b>
+            <span>{i + 1}.</span>
             <NameInput
               disabled
               placeholder="Enter player's name..."
@@ -97,20 +106,23 @@ const Players = () => {
               noPadding
               onClick={() => deletePlayer(i)}
             >
-              x
+              <XIcon />
             </Button>
           </PlayerContainer>
         ))}
         <Spacer height="1.5rem" />
         {playersNb < 6 && (
           <PlayerContainer>
-            <form onSubmit={onSubmitNewPlayer} style={{ width: "100%" }}>
+            <Form onSubmit={onSubmitNewPlayer} style={{ width: "100%" }}>
               <NameInput
                 placeholder="Enter player's name..."
                 value={newPlayer}
                 onChange={onNewPlayerChange}
               />
-            </form>
+              <Button noPadding>
+                <PlusIcon />
+              </Button>
+            </Form>
           </PlayerContainer>
         )}
         <ContinueButton

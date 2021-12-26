@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
-import { Button } from "../../designSystem/input/Button";
 import Modal from "../../designSystem/Modal";
-import Spacer from "../../designSystem/Spacer";
 
 const LevelInstructions = styled.h3`
   text-transform: uppercase;
@@ -14,7 +12,7 @@ const InstructionsModal = ({
   readingInstructions,
   setReadingInstructions,
 }) => {
-  const { levels, wildcards } = require("../../decks/instruction.json");
+  const { levels } = require("../../decks/instruction.json");
 
   return (
     <>
@@ -22,6 +20,7 @@ const InstructionsModal = ({
         <Modal onClose={() => setReadingInstructions(false)}>
           <h2>How to Play</h2>
           <p>Pick a card. Read it out loud to your partner(s) and listen to their answer.</p>
+          <p>When you feel ready, you can go to the next level.</p>
           <br />
           <h2>Levels</h2>
           {levels.map((level, levelIndex) => (

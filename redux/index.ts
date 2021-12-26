@@ -83,6 +83,7 @@ export const initialState: ReduxState = {
     all: [
       // standalones
       mainDeck,
+      // solo
       // selfLoveDeck,
       // selfReflectionDeck,
       // healingDeck,

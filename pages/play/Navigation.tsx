@@ -65,6 +65,13 @@ const NavigationLinks = styled.div`
   }
 `;
 
+const StyledButton = styled(Button)`
+  cursor: grab;
+  && {
+    text-decoration: none;
+  }
+`;
+
 const Navigation = ({
   showMenu,
   setChangingLevel,
@@ -75,9 +82,9 @@ const Navigation = ({
 
   return (
     <StyledNavigation>
-      <Button transparent onClick={() => router.push("/")}>
+      <StyledButton transparent>
         STRNGRS
-      </Button>
+      </StyledButton>
       <div style={{ flexGrow: 1 }} />
       {showMenu &&
       <NavigationLinks>
