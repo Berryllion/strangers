@@ -5,13 +5,9 @@ type ButtonProps = {
   textColor?: string;
   transparent?: Boolean;
   noPadding?: Boolean;
-  type?: "button" | "submit";
 };
 
-export const Button = styled.button.attrs<ButtonProps>((p) => ({
-  ...p,
-  type: (p) => (p.type ? p.type : "button"),
-}))<ButtonProps>`
+export const Button = styled.button<ButtonProps>`
   cursor: pointer;
   text-transform: uppercase;
   font-weight: bold;
@@ -19,9 +15,11 @@ export const Button = styled.button.attrs<ButtonProps>((p) => ({
   width: fit-content;
   padding: ${({ noPadding }) => noPadding ? "0" : "1rem 5rem"};
   border-radius: 5px;
-  ${({ textColor }) => textColor ? `color: ${textColor};` : ""}
-  ${({ backgroundColor }) => backgroundColor ? `background-color: ${backgroundColor};` : ""}
-  ${({ transparent }) => transparent ? "background-color: transparent;" : ""}
+  color: ${({ textColor, theme }) => textColor ? textColor : theme.textColor};
+  background-color: ${({ backgroundColor, theme, transparent }) => {
+    if (transparent) return "transparent";
+    return backgroundColor ? backgroundColor : theme.backgroundColor;
+  }};
 
   :hover {
     text-decoration: underline;

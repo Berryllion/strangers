@@ -4,15 +4,15 @@ import { ReduxState } from "..";
 export const SET_PLAYERS = 'SET_PLAYERS';
 
 /* Types */
-export interface SetPlayerssAction {
+export interface SetPlayersAction {
   type: typeof SET_PLAYERS;
   payload: Array<string>;
 }
 
-export type Actions = SetPlayerssAction;
+export type Actions = SetPlayersAction;
 
 /* Functions */
-export function setPlayerss(state: ReduxState, action: SetPlayerssAction): ReduxState {
+export function setPlayers(state: ReduxState, action: SetPlayersAction): ReduxState {
   return {
     ...state,
     players: action.payload,
@@ -23,6 +23,6 @@ export function setPlayerss(state: ReduxState, action: SetPlayerssAction): Redux
 export const dispatches = [
   {
     action: SET_PLAYERS,
-    function: setPlayerss,
+    function: setPlayers,
   },
 ];

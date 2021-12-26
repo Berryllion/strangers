@@ -10,7 +10,7 @@ import Modal from "../../designSystem/Modal";
 import Error from "../../designSystem/Error";
 import { Button } from "../../designSystem/input/Button";
 import { ReduxState } from "../../redux";
-import { SET_CARDS_AVAILABLE, SET_GAME_LEVEL, SET_GAME_LEVELS_AVAILABLE } from "../../redux/actions/game";
+import { SET_CARDS_AVAILABLE, SET_GAME_LEVEL } from "../../redux/actions/game";
 import { getWindowResize, useClickOutside } from "../../utils/hooks";
 import Navigation from "./Navigation";
 import Card from "./Card";
@@ -71,6 +71,7 @@ const CardNb = styled.div`
   left: 0;
   right: 0;
   text-align: center;
+  margin: 0;
 `;
 
 const PlayerTurn = styled.div`
@@ -225,12 +226,13 @@ const Home = () => {
       <Head>
         <title>{"Play"}</title>
       </Head>
+
       <Navigation
         showMenu={showMenu}
-        gameInfo={game}
         setChangingLevel={setChangingLevel}
         setShowMenu={setShowMenu}
       />
+
       <StyledMain>
         <PlayerTurn>
           {`${players[currentPlayer]}'s turn`}
@@ -257,7 +259,9 @@ const Home = () => {
         </ClickingSides>
 
         {/* CARD NB */}
-        <CardNb as="h4">{currentCard + 1} / {currentLevelLength}</CardNb>
+        <CardNb as="h4">
+          {currentCard + 1} / {currentLevelLength}
+        </CardNb>
 
         {/* LEVEL */}
         {changingLevel && (

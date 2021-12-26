@@ -1,0 +1,10 @@
+{
+  "red": {
+    "textColor": "#fff",
+    "backgroundColor": "var(--primary)"
+  },
+  "white": {
+    "textColor": "var(--primary)",
+    "backgroundColor": "#fff"
+  }
+}

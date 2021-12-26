@@ -1,4 +1,8 @@
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import styled from "styled-components";
+
+import { SET_THEME } from "../../redux/actions/theme";
 
 const CardContainer = styled.div`
   display: flex;
@@ -66,36 +70,32 @@ const StyledCard = styled.div<{
 `;
 
 const Card = ({ currentLevel, currentCard, allCards, decksAvailable }) => {
-  if (allCards.length === 0) return null;
+  const dispatch = useDispatch();
 
   const cardInfo = allCards[currentLevel][currentCard];
-
-  if (!cardInfo) return null;
-
-  let question = cardInfo.card;
-  const isWildcard = cardInfo.card.startsWith("Wild Card");
+  const isWildcard = cardInfo ? cardInfo.card.startsWith("Wild Card") : false;
   const ownItRegex = /\[([^\]]+)\]\(([^)]+)\)/i;
+  let question = cardInfo ? cardInfo.card : null;
 
-  const changeColorCss = (cssElement, value) => {
-    let elements = document.querySelectorAll(cssElement);
+  useEffect(() => {
+    const { white: whiteTheme, red: redTheme } = require("../../utils/theme.json");
 
-    [].slice.call(elements).forEach(elem => {
-      elem.style.color = value;
-    });
-  }
+    if (isWildcard) {
+      question = question.replace("Wild Card", "");
 
-  // TODO: use styled-components theme instead
-  // NOTE: because this is really disgusting
-  if (isWildcard) {
-    question = question.replace("Wild Card", "");
-    document.body.style.background = "#fff";
-    document.body.style.color = "var(--primary)";
-    changeColorCss("button", "var(--primary)");
-  } else {
-    document.body.style.background = "var(--primary)";
-    document.body.style.color = "#fff";
-    changeColorCss("button", "#fff");
-  }
+      dispatch({
+        type: SET_THEME,
+        payload: whiteTheme,
+      });
+    } else {
+      dispatch({
+        type: SET_THEME,
+        payload: redTheme,
+      });
+    }
+  }, [isWildcard]);
+
+  if (allCards.length === 0 || !question) return null;
 
   const colorWordMatch = cardInfo.card.match(ownItRegex);
   let backgroundColor = null;
@@ -121,8 +121,6 @@ const Card = ({ currentLevel, currentCard, allCards, decksAvailable }) => {
   const currentDeck = decksAvailable.find(d => d.name === cardInfo.deck);
   const textColor = currentDeck.colors.secondary.main;
   const mainBackgroundColor = currentDeck.colors.primary.main;
-
-  console.log(backgroundColor);
 
   return (
     <CardContainer>

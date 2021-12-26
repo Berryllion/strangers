@@ -18,6 +18,7 @@ const StyledNavigation = styled.div`
   .menuIcon {
     display: none;
     cursor: pointer;
+    color: ${({ theme }) => theme.textColor};
   }
 
   ${Button} {
@@ -31,25 +32,9 @@ const StyledNavigation = styled.div`
     }
   }
 
-  > select {
-    font-size: 1.2rem;
-    color: #fff;
-    font-weight: bold;
-    text-transform: uppercase;
-
-    > option {
-      text-transform: initial;
-      color: #000;
-    }
-  }
-
   @media (max-width: 640px) {
     .menuIcon {
       display: block;
-    }
-
-    > select {
-      font-size: 1rem;
     }
   }
 `;
@@ -59,6 +44,9 @@ const NavigationLinks = styled.div`
   justify-content: flex-end;
   align-items: center;
 
+  .separator {
+    color: ${({ theme }) => theme.textColor};
+  }
 
   @media (max-width: 640px) {
     flex-direction: column;
@@ -77,23 +65,21 @@ const NavigationLinks = styled.div`
   }
 `;
 
-const Navigation = ({ showMenu, gameInfo, setChangingLevel, setShowMenu }) => {
+const Navigation = ({ showMenu, setChangingLevel, setShowMenu }) => {
   const router = useRouter();
 
   return (
     <StyledNavigation>
-      <Button onClick={() => router.push("/")}>
-        WNRS
+      <Button transparent onClick={() => router.push("/")}>
+        STRNGRS
       </Button>
       <div style={{ flexGrow: 1 }} />
       {showMenu &&
       <NavigationLinks>
-        <Button>Instructions</Button>
+        <Button transparent>Instructions</Button>
         <div className="separator">/</div>
-        <Button onClick={() => setChangingLevel(true)}>
-          {gameInfo.level !== 3
-          ? <>Level {gameInfo.level + 1}</>
-          : "Final Card"}
+        <Button transparent onClick={() => setChangingLevel(true)}>
+          Change level
         </Button>
       </NavigationLinks>}
       <MenuIcon className="menuIcon" onClick={() => setShowMenu(!showMenu)} />

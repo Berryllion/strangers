@@ -12,10 +12,11 @@ import { SET_SELECTED_DECKS } from "../../redux/actions/selectedDecks";
 
 const StyledMain = styled(Main)`
   position: relative;
-  display: block;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  overflow: auto;
   height: auto;
-  margin-top: 8%;
-  margin-bottom: 8%;
+  display: flex;
 `;
 
 const DeckContainer = styled.div`
@@ -57,8 +58,8 @@ const StyledDeckButton = styled(Button)<{ selected: boolean }>`
 
 const ContinueButton = styled(Button)`
   margin-top: 2rem;
-  margin-bottom: 5rem;
-  float: right;
+  margin-bottom: 1rem;
+  align-self: flex-end;
 `;
 
 const Home = () => {
@@ -102,7 +103,7 @@ const Home = () => {
           selected={selectedDecks.find(d => d === deck.menu) !== undefined}
         >
           {deck.menu}<br />
-          {deck["back-description"].map(d => <p>{d}</p>)}
+          {deck["back-description"].map((d, i) => <p key={i}>{d}</p>)}
         </StyledDeckButton>
       </DeckContainer>
     )

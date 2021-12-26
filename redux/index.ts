@@ -49,6 +49,9 @@ export interface ReduxState {
         card: string,
       }>,
     }
+  },
+  theme: {
+    currentTheme: Object,
   }
 }
 
@@ -64,6 +67,8 @@ const honestDatingDeck = require("../decks/expansions/honestDating.json");
 const weedDeck = require("../decks/expansions/weed.json");
 const ownItDeck = require("../decks/expansions/ownIt.json");
 const sneakyLinkDeck = require("../decks/expansions/sneakyLink.json");
+
+const { red: redTheme } = require("../utils/theme.json");
 
 export const initialState: ReduxState = {
   players: [],
@@ -91,6 +96,9 @@ export const initialState: ReduxState = {
       level3: [],
       finalCard: [],
     }
+  },
+  theme: {
+    currentTheme: redTheme,
   }
 };
 
