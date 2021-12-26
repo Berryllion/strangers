@@ -29,7 +29,7 @@ export interface ReduxState {
     all: Array<Decks>;
   };
   game: {
-    level: number,
+    level: number | string,
     levelsAvailable: number,
     cards: {
       level1: Array<{
@@ -62,6 +62,10 @@ export let store: Store<ReduxState, ActionTypes> | undefined;
 // All decks from https://github.com/jonathan-lph/wnrs (besides sneakyLinkDeck)
 // Some have been modified to be more versatile
 const mainDeck = require("../decks/standalones/main.json");
+// const selfLoveDeck = require("../decks/standalones/selfLove.json");
+// const selfReflectionDeck = require("../decks/standalones/selfReflection.json");
+// const healingDeck = require("../decks/standalones/healing.json");
+// const breakupDeck = require("../decks/standalones/breakup.json");
 
 const innerCircleDeck = require("../decks/expansions/innerCircle.json");
 const relationshipDeck = require("../decks/expansions/relationship.json");
@@ -77,16 +81,20 @@ export const initialState: ReduxState = {
   decks: {
     selected: [],
     all: [
+      // standalones
       mainDeck,
+      // selfLoveDeck,
+      // selfReflectionDeck,
+      // healingDeck,
+      // breakupDeck,
+
+      // expansions
       innerCircleDeck,
       relationshipDeck,
       honestDatingDeck,
       ownItDeck,
       weedDeck,
       sneakyLinkDeck,
-      // quarantineDeck,
-      // raceAndPrivilegeDeck,
-      // votingDeck,
     ],
   },
   game: {

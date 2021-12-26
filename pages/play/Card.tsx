@@ -78,12 +78,13 @@ const Card = ({ currentLevel, currentCard, allCards, decksAvailable }) => {
   const ownItRegex = /\[([^\]]+)\]\(([^)]+)\)/i;
   let question = cardInfo ? cardInfo.card : null;
 
-  useEffect(() => {
+  if (isWildcard)
+    question = question.replace("Wild Card", "");
+
+    useEffect(() => {
     const { white: whiteTheme, red: redTheme } = require("../../utils/theme.json");
 
     if (isWildcard) {
-      question = question.replace("Wild Card", "");
-
       dispatch({
         type: SET_THEME,
         payload: whiteTheme,

@@ -22,6 +22,41 @@ const Container = styled.div`
   flex-direction: column;
 `;
 
+  // const setCorrectLevel = ({ levelName, levelIndex }) => {
+//   if (levelName === "Final Card" || levelIndex === 4) {
+  //     setLevel("finalCard");
+  //   } else {
+  //     setLevel(levelIndex);
+  //   }
+  // }
+
+  // if (decksAvailable.length === 1) {
+  //   return (
+  //     <>
+  //       {changingLevel && (
+  //         <Modal onClose={() => setChangingLevel(false)}>
+  //           <Container>
+  //             {decksAvailable[0].levels.map((level, i) => (
+  //               <LevelsButton
+  //                 selected={i === currentLevel}
+  //                 key={i}
+  //                 onClick={() => setCorrectLevel({
+  //                   levelName: level,
+  //                   levelIndex: i,
+  //                 })}
+  //               >
+  //                 {level}
+  //               </LevelsButton>
+  //             ))}
+  //           </Container>
+  //         </Modal>
+  //       )}
+  //     </>
+  //   )
+  // }
+
+// TODO: better level handling
+// not working for single player deck
 const LevelModal = ({
   changingLevel,
   setChangingLevel,

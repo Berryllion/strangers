@@ -9,7 +9,7 @@ import Error from "../../designSystem/Error";
 import { Button } from "../../designSystem/input/Button";
 import { ReduxState } from "../../redux";
 import { SET_SELECTED_DECKS } from "../../redux/actions/selectedDecks";
-import { SET_CARDS_AVAILABLE } from "../../redux/actions/game";
+import { SET_CARDS_AVAILABLE, SET_CURRENT_CARD, SET_CURRENT_PLAYER, SET_GAME_LEVEL } from "../../redux/actions/game";
 
 const StyledMain = styled(Main)`
   position: relative;
@@ -69,7 +69,7 @@ const Home = () => {
   const players = useSelector((state: ReduxState) => state.players);
   const decks = useSelector((state: ReduxState) => state.decks);
 
-  const [selectedDecks, setSelectedDecks] = useState(["Main"]);
+  const [selectedDecks, setSelectedDecks] = useState([]);
 
   const selectedDecksNb = selectedDecks.length;
   const playersNb = players.length;
@@ -101,7 +101,19 @@ const Home = () => {
         level3: [],
         finalCard: [],
       }
-    })
+    });
+    dispatch({
+      type: SET_GAME_LEVEL,
+      payload: 0,
+    });
+    dispatch({
+      type: SET_CURRENT_CARD,
+      payload: 0,
+    });
+    dispatch({
+      type: SET_CURRENT_PLAYER,
+      payload: 0,
+    });
     router.push("/play");
   }
 
@@ -143,7 +155,10 @@ const Home = () => {
         )}
         {playersNb === 1 && (
           <>
-            <h3>One player</h3>
+            <Error>Error: 1 player decks not available yet.</Error>
+            {/* {decks.all.filter(deck => !deck["is-expension"]).map(deck => (
+              <DeckButton deck={deck} key={deck.name} />
+            ))} */}
           </>
         )}
         <ContinueButton

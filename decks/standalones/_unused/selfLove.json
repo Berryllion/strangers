@@ -1,46 +1,47 @@
-export const name = "Self-love Edition"
-export const menu = "Self-love"
-export const edition = "Self-love Edition"
-export const suggestedPlayer = "1 player"
-export const color = {
-    primary: {
-        main:  '#efc5c3',
-        contrastText: '#c10016',
+{
+  "name": "Self-love Edition",
+  "menu": "Self-love",
+  "edition": "Self-love Edition",
+  "suggested-players": "1 player",
+  "colors": {
+    "primary": {
+      "main": "#efc5c3",
+      "contrastText": "#c10016"
     },
-    secondary: {
-        main: '#c10016'
-    },
-}
-export const levels = ["Self-love", "Final Card"]
-export const isExpansion = false
-
-export const backDesc = [
+    "secondary": {
+      "main": "#c10016"
+    }
+  },
+  "levels": [
+    "Self-love",
+    "Final Card"
+  ],
+  "is-expension": false,
+  "back-description": [
     "Time to fall in love with myself ❤️"
-]
-
-export const instruction = [
+  ],
+  "instructions": [
     "Self-love is about calling ourselves on our own stuff, not just everybody's else's. It's about being kind to ourselves, even when we mess up. And appreciating ourselves, even when no one else does.",
     "Add this edition to your self-love practice. Answer these questions at your own pace. Journal your answers or play with a friend who is also on their self-love journey. Revisit these questions as often as you need.",
     "The more we love ourselves, the easier it becomes to give and receive love from others.",
-    "Ready?",
-]
-
-export const level1 = [ // 51 cards
+    "Ready?"
+  ],
+  "level1": [
     "What belief about myself is holding me back the most? (Replace with a positive affirmation.)",
-    "What am I proudest of myself for saying \"no\" to recently?", //
+    "What am I proudest of myself for saying \"no\" to recently?",
     "Am I avoiding any hard conversations with myself? If so, what comes to mind?",
     "What mistake of mine taught me the most recently? What did it teach me?",
     "What titles would you give this chapter of your self-love journey?",
     "What would I never want to change about myself? (Be specific!)",
     "What part(s) of myself have I felt the need to change in the past that I now embrace?",
-    "What does self-love mean to me? What does it not mean to me? (Get specific.)", //
+    "What does self-love mean to me? What does it not mean to me? (Get specific.)",
     "What did I give too much energy to a year ago that I can laugh at now?",
     "What can I take responsibility for that I've been placing on someone else?",
     "What do I want to learn more about in this chapter in my life? (Take time this week to explore this topic.)",
     "Do I have a clear picture of who I want to be this time next year? What's one small step I can towards becoming that person?",
     "When was the last time I shared my truth, even though it felt risky?",
     "Fill in the blank: Sometimes I forget how good I am at _________.",
-    "What do I want to stop apologizing for?", //
+    "What do I want to stop apologizing for?",
     "What did I learn about myself this week?",
     "What am I not willing to settle for in relationships today, that I allowed not too long ago?",
     "When was the last time someone helped me appreciate a part of myself that feels hard for me to love?",
@@ -64,7 +65,7 @@ export const level1 = [ // 51 cards
     "When was the last time I earned my own respect? Explain.",
     "How have I neglected myself recently? What's one small way I can make it up to myself today?",
     "When do I feel my best? What am I wearing? What am I doing? (Create that day for yourself as soon as possible.)",
-    "What haven't I given myself permission to feel recently?", //
+    "What haven't I given myself permission to feel recently?",
     "What's a \"flaw\" I've learned to appreciate about myself overtime?",
     "What are three things I love about my physical appearance? (Permission to brag!)",
     "When was the last time I pleasantly surprised myself? Explain.",
@@ -75,10 +76,10 @@ export const level1 = [ // 51 cards
     "Wild Card Write out one thing you appreciate about the body part you're most insecure about.",
     "Wild Card Write out an affirmation you need to hear most in this current moment. Repeat it everyday this week.",
     "Reminder Replace \"That was so stupid of me\" with \"That was so human of me.\"",
-    "Reminder You deserve to take a breath. Relax for a moment. You've made it this far. Take that in.", //
-    "Reminder The more you love yourself the better your relationships with everyone else will be.",
-]
-
-export const finalCard = [
-    "Write a love letter to yourself. Take as much time as you need. Place it somewhere safe. Read it when you need it most.", //
-]
+    "Reminder You deserve to take a breath. Relax for a moment. You've made it this far. Take that in.",
+    "Reminder The more you love yourself the better your relationships with everyone else will be."
+  ],
+  "final-card": [
+    "Write a love letter to yourself. Take as much time as you need. Place it somewhere safe. Read it when you need it most."
+  ]
+}

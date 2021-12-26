@@ -1,24 +1,25 @@
-export const name = "Self-reflection Edition"
-export const menu = "Self-reflection"
-export const edition = "Self-reflection Edition"
-export const suggestedPlayer = "1 player"
-export const color = {
-    primary: {
-        main:  '#c10016',
-        contrastText: '#ffffff',
+{
+  "name": "Self-reflection Edition",
+  "menu": "Self-reflection",
+  "edition": "Self-reflection Edition",
+  "suggested-players": "1 player",
+  "colors": {
+    "primary": {
+      "main": "#c10016",
+      "contrastText": "#ffffff"
     },
-    secondary: {
-        main:  '#c10016',
+    "secondary": {
+      "main": "#c10016"
     }
-}
-export const levels = ["Self-reflection"]
-export const isExpansion = false
-
-export const backDesc = [
-    "Self awareness starts with self-reflection"
-]
-
-export const level1 = [ // 52 cards
+  },
+  "levels": [
+    "Self-reflection"
+  ],
+  "is-expension": false,
+  "back-description": [
+    "Self awareness starts with self-reflection."
+  ],
+  "level1": [
     "When do I feel most helpful to others?",
     "What do I keep doing that keeps hurting? Why do I keep repeating this behavior?",
     "What did the people who raised me teach me about love? What lessons do I want to keep? What do I want to challenge?",
@@ -72,4 +73,5 @@ export const level1 = [ // 52 cards
     "Wild Card Take 3 deep breaths before answering the next question.",
     "Wild Card What do I need to hear most right now? (Write it out. Place somewhere you'll see often.)",
     "Wild Card What are 3 things I love most about myself today? (Write them out.)"
-]
+  ]
+}

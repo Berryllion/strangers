@@ -129,7 +129,7 @@ const Home = () => {
   const currentPlayer = game.currentPlayer;
   const nbLevels = calculateGameLevelsAvailable();
   const nbLevelArray = [...Array(nbLevels).keys()];
-  const currentLevelAttribute = currentLevel < 3
+  const currentLevelAttribute = typeof(currentLevel) !== "string" && currentLevel < 3
     ? `level${currentLevel + 1}`
     : "finalCard";
   const currentLevelLength = game.cards[currentLevelAttribute].length;
@@ -218,6 +218,7 @@ const Home = () => {
       setShowMenu(false);
     }
   }, [width]);
+// console.log(game.cards)
 
   if (selectedDecks.length === 0) {
     return (
@@ -270,7 +271,7 @@ const Home = () => {
         {/* CURRENT LEVEL & CARD NB */}
         <GameInfo as="h4">
           <div>
-            {currentLevel < 3
+            {currentLevel < 3 && typeof(currentLevel) !== "string"
             ? `Level ${currentLevel + 1}`
             : "Final Card"}<br />
           </div>
@@ -289,6 +290,7 @@ const Home = () => {
           nbLevelArray={nbLevelArray}
           currentLevel={currentLevel}
           setLevel={setLevel}
+          // decksAvailable={decksAvailable}
         />
       </StyledMain>
     </>

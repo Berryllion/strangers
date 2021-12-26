@@ -14,6 +14,7 @@ const Main = styled.div<MainProps>`
   background-color: ${({ theme }) => theme.backgroundColor};
   color: ${({ theme }) => theme.textColor};
   transition: color 0.5s ease-out, background-color 0.5s ease-out;
+  min-height: 100vh;
 
   a {
     color: ${({ theme }) => theme.textColor};

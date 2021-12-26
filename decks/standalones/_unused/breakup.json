@@ -1,30 +1,31 @@
-export const name = "Breakup Edition"
-export const menu = "Breakup"
-export const edition = "Breakup Edition"
-export const suggestedPlayer = "1+ player"
-export const color = {
-    primary: {
-        main:  '#c10016',
-        contrastText: '#ffffff',
+{
+  "name": "Breakup Edition",
+  "menu": "Breakup",
+  "edition": "Breakup Edition",
+  "suggested-players": "1+ player",
+  "colors": {
+    "primary": {
+      "main": "#c10016",
+      "contrastText": "#ffffff"
     },
-    secondary: {
-        main:  '#c10016',
+    "secondary": {
+      "main": "#c10016"
     }
-}
-export const levels = ['Breakup', 'Final Card']
-export const isExpansion = false
-
-export const backDesc = [
-    "The end of a relationship is the beginning of a new one... with yourself"
-]
-
-export const instruction = [
+  },
+  "levels": [
+    "Breakup",
+    "Final Card"
+  ],
+  "is-expension": false,
+  "back-description": [
+    "The end of a relationship is the beginning of a new one... with yourself."
+  ],
+  "instructions": [
     "Breakups are important. They teach us about ourselves. They show us what we want and what we don't. They allow us to move away from what isn't for us – and closer to what is. They even show us parts of ourselves we need to break up.",
     "We've created this edition as a tool to self-reflect after a breakup. Journal your answers or play with a friend who can be a soundboard for your healing process. The end of a relationship is the beginning of a new one… with yourself.",
-    "Ready?",
-]
-
-export const level1 = [ // 47 / 50 cards
+    "Ready?"
+  ],
+  "level1": [
     "What has helped you heal from a heartbreak in the past, besides time and meeting someone new?",
     "After your most recent breakup, what song did you play on repeat?",
     "Picture you're talking to your ex. Finish the sentence: You hurt me, but thank you for _________.",
@@ -75,9 +76,9 @@ export const level1 = [ // 47 / 50 cards
     "Wild Card Write down 3 things about your last relationship that you will no longer accept moving forward. Get specific.",
     "Reminder Breakups skew your memory. Your ex was not perfect. You will feel better.",
     "Reminder Don't let your loneliness take you back to people who repeatedly hurt you.",
-    "Reminder Your love life is one area of your life. Don't forget to nurture the rest.",
-]
-
-export const finalCard = [
+    "Reminder Your love life is one area of your life. Don't forget to nurture the rest."
+  ],
+  "final-card": [
     "Write a final note to your ex that they'll never see. Get it all off your chest. Tear when you feel ready."
-]
+  ]
+}
