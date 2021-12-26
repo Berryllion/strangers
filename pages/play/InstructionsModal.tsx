@@ -25,12 +25,12 @@ const InstructionsModal = ({
           <br />
           <h2>Levels</h2>
           {levels.map((level, levelIndex) => (
-            <>
+            <React.Fragment key={levelIndex}>
               <LevelInstructions>
                 {`Level ${levelIndex + 1}`}
               </LevelInstructions>
               <p>{level}</p>
-            </>
+            </React.Fragment>
           ))}
           <br />
           <h2>Wildcards</h2>

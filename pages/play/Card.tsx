@@ -30,8 +30,8 @@ const StyledCard = styled.div<{
   text-align: center;
   padding: 0 1.5rem;
   height: 30vh;
-  width: 28rem;
-  max-width: 28rem;
+  width: 30rem;
+  max-width: 30rem;
   background-color: ${({ isWildcard, backgroundColor }) => {
     return isWildcard ? backgroundColor : "#fff";
   }};
