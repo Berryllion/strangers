@@ -14,18 +14,7 @@ import { SET_CARDS_AVAILABLE, SET_GAME_LEVEL } from "../../redux/actions/game";
 import { getWindowResize, useClickOutside } from "../../utils/hooks";
 import Navigation from "./Navigation";
 import Card from "./Card";
-
-const LevelsButton = styled(Button)<{ selected: boolean }>`
-  border: 2px solid var(--primary);
-  background-color: ${({ selected }) => selected ? "var(--primary)" : "transparent"};
-  color: ${({ selected }) => selected ? "#fff" : "var(--primary)"};
-  padding: 1rem;
-  width: 80%;
-
-  :not(:first-child) {
-    margin-top: 1rem;
-  }
-`;
+import LevelModal from "./LevelModal";
 
 const StyledMain = styled(Main)`
   padding: 0;
@@ -65,13 +54,21 @@ const ClickingSides = styled.div`
   }
 `;
 
-const CardNb = styled.div`
+const GameInfo = styled.div`
   position: absolute;
   bottom: 5%;
   left: 0;
   right: 0;
   text-align: center;
   margin: 0;
+  font-weight: normal;
+
+  > *:first-child {
+    font-size: 1.2rem;
+  }
+  > *:last-child {
+    padding-top: .8rem;
+  }
 `;
 
 const PlayerTurn = styled.div`
@@ -258,31 +255,25 @@ const Home = () => {
           }} />
         </ClickingSides>
 
-        {/* CARD NB */}
-        <CardNb as="h4">
-          {currentCard + 1} / {currentLevelLength}
-        </CardNb>
+        {/* CURRENT LEVEL & CARD NB */}
+        <GameInfo as="h4">
+          <div>
+            {currentLevel < 3
+            ? `Level ${currentLevel + 1}`
+            : "Final Card"}<br />
+          </div>
+          <div>
+            <b>{currentCard + 1} / {currentLevelLength}</b>
+          </div>
+        </GameInfo>
 
-        {/* LEVEL */}
-        {changingLevel && (
-          <Modal onClose={() => setChangingLevel(false)}>
-            {/* <h2>Change level</h2>
-            <Spacer height="1rem" /> */}
-            <>
-              {nbLevelArray.map(nb => (
-                <LevelsButton
-                  selected={nb === currentLevel}
-                  key={nb}
-                  onClick={() => setLevel(nb)}
-                >
-                  {nb !== 3
-                  ? <>Level {nb + 1}</>
-                  : "Final Card"}
-                </LevelsButton>
-              ))}
-            </>
-          </Modal>
-        )}
+        <LevelModal
+          changingLevel={changingLevel}
+          setChangingLevel={setChangingLevel}
+          nbLevelArray={nbLevelArray}
+          currentLevel={currentLevel}
+          setLevel={setLevel}
+        />
       </StyledMain>
     </>
   );

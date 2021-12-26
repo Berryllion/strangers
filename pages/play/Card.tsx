@@ -43,6 +43,7 @@ const StyledCard = styled.div<{
   text-transform: uppercase;
   // box-shadow from https://github.com/jonathan-lph/wnrs
   box-shadow: 0px 3px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+  transition: color 0.5s ease-out, background-color 0.5s ease-out;
 
   h4 {
     font-size: 1.2rem;

@@ -30,7 +30,7 @@ const CloseButtonContainer = styled.div`
 
   > ${Button} {
     padding: .5rem 1rem;
-    color: var(--primary);
+    color: #fff;
   }
 
   @media (max-width: 640px) {
@@ -42,16 +42,16 @@ const CloseButtonContainer = styled.div`
 
 const Content = styled.div`
   position: relative;
-  background-color: #fff;
-  color: var(--primary);
-  width: min-content;
+  background-color: var(--primary);
+  color: #fff;
   margin: auto;
-  border-radius: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 5rem 0;
   width: 50%;
+  height: auto;
 
   @media(max-width: 640px) {
     padding: 8%;
