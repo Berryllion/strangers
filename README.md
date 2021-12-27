@@ -1,7 +1,7 @@
 # Strangers
 
-Card games to create connections.
-Based heavily on https://github.com/jonathan-lph own version and https://werejustfriends.online/.
+Card games to create connections. <br />
+Thanks to https://github.com/jonathan-lph for the decks and inspiration as well as https://werejustfriends.online/.
 
 ## How to use it?
 
@@ -9,7 +9,7 @@ Based heavily on https://github.com/jonathan-lph own version and https://werejus
 ```bash
 # development
 npm run dev
-# prof
+# prod
 yarn run build
 ```
 
