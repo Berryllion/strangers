@@ -3,8 +3,12 @@
     "textColor": "#fff",
     "backgroundColor": "var(--primary)"
   },
+  "black": {
+    "textColor": "#fff",
+    "backgroundColor": "#101010"
+  },
   "white": {
     "textColor": "var(--primary)",
-    "backgroundColor": "#fff"
+    "backgroundColor": "#f3f3f3"
   }
 }
