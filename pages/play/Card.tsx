@@ -1,9 +1,8 @@
 import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import styled from "styled-components";
-import { ReduxState } from "../../redux";
 
-import { SET_THEME } from "../../redux/actions/theme";
+import { SET_THEME_IS_WILDCARD } from "../../redux/actions/theme";
 
 const CardContainer = styled.div`
   display: flex;
@@ -73,7 +72,6 @@ const StyledCard = styled.div<{
 
 const Card = ({ currentLevel, currentCard, allCards, decksAvailable }) => {
   const dispatch = useDispatch();
-  const previousTheme = useSelector((state: ReduxState) => state.theme.previousTheme);
 
   const cardInfo = allCards[currentLevel][currentCard];
   const isWildcard = cardInfo ? cardInfo.card.startsWith("Wild Card") : false;
@@ -88,13 +86,13 @@ const Card = ({ currentLevel, currentCard, allCards, decksAvailable }) => {
 
     if (isWildcard) {
       dispatch({
-        type: SET_THEME,
-        payload: whiteTheme,
+        type: SET_THEME_IS_WILDCARD,
+        payload: true,
       });
     } else {
       dispatch({
-        type: SET_THEME,
-        payload: previousTheme,
+        type: SET_THEME_IS_WILDCARD,
+        payload: false,
       });
     }
   }, [isWildcard]);

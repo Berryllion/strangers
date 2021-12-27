@@ -53,8 +53,9 @@ export interface ReduxState {
     currentPlayer: number,
   },
   theme: {
-    currentTheme: Object,
-    previousTheme: Object,
+    isWildcard: boolean,
+    currentTheme: string,
+    chosenTheme: string,
   }
 }
 
@@ -112,8 +113,9 @@ export const initialState: ReduxState = {
     currentPlayer: 0,
   },
   theme: {
+    isWildcard: false,
     currentTheme: redTheme,
-    previousTheme: redTheme,
+    chosenTheme: "red",
   }
 };
 

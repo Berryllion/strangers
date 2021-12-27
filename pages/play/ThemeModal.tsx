@@ -35,11 +35,9 @@ const ThemeModal = ({
   const allThemes = require("../../utils/theme.json");
 
   const changeTheme = newThemeName => {
-    let newTheme = allThemes[newThemeName];
-
     dispatch({
       type: SET_THEME,
-      payload: newTheme,
+      payload: newThemeName,
     });
     setCurrentTheme(newThemeName);
   }
