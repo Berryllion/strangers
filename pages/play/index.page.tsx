@@ -259,15 +259,21 @@ const Home = () => {
 
         {/* LEFT SIDE */}
         <ClickingSides onClick={onClickLeft}>
-          <ChevronLeftIcon style={{
-            opacity: currentCard === 0 ? 0 : 1
-          }} />
+          <ChevronLeftIcon
+            className="icon"
+            style={{
+              opacity: currentCard === 0 ? 0 : 1
+            }}
+          />
         </ClickingSides>
         {/* RIGHT SIDE */}
         <ClickingSides onClick={onClickRight}>
-          <ChevronRightIcon style={{
-            opacity: currentLevelLength === currentCard + 1 ? 0 : 1
-          }} />
+          <ChevronRightIcon
+            className="icon"
+            style={{
+              opacity: currentLevelLength === currentCard + 1 ? 0 : 1
+            }}
+          />
         </ClickingSides>
 
         {/* CURRENT LEVEL & CARD NB */}

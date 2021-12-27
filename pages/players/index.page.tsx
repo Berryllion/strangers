@@ -106,7 +106,7 @@ const Players = () => {
               noPadding
               onClick={() => deletePlayer(i)}
             >
-              <XIcon />
+              <XIcon className="icon" />
             </Button>
           </PlayerContainer>
         ))}
@@ -120,7 +120,7 @@ const Players = () => {
                 onChange={onNewPlayerChange}
               />
               <Button noPadding>
-                <PlusIcon />
+                <PlusIcon className="icon" />
               </Button>
             </Form>
           </PlayerContainer>

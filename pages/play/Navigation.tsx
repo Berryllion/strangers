@@ -86,7 +86,9 @@ const Navigation = ({
       <div style={{ flexGrow: 1 }} />
       {showMenu &&
       <NavigationLinks>
-        <Button transparent onClick={() => setReadingInstructions(true)}>Instructions</Button>
+        <Button transparent onClick={() => setReadingInstructions(true)}>
+          Instructions
+        </Button>
         <div className="separator">/</div>
         <Button transparent onClick={() => setChangingLevel(true)}>
           Change level
@@ -96,7 +98,10 @@ const Navigation = ({
           Change theme
         </Button>
       </NavigationLinks>}
-      <MenuIcon className="menuIcon" onClick={() => setShowMenu(!showMenu)} />
+      <MenuIcon
+        className="menuIcon icon"
+        onClick={() => setShowMenu(!showMenu)}
+      />
     </StyledNavigation>
   );
 }

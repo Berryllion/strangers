@@ -1,8 +1,8 @@
-import { constants } from 'http2';
 import { useRef } from 'react';
 import styled from 'styled-components';
-import { useClickOutside } from '../utils/hooks';
+import { X as XIcon } from 'react-feather';
 
+import { useClickOutside } from '../utils/hooks';
 import { Button } from './input/Button';
 
 type ModalProps = {
@@ -69,8 +69,8 @@ const Modal = ({
     <Overlay>
       <Content ref={modalContentRef}>
         <CloseButtonContainer onClick={onClose}>
-          <Button transparent>
-            x
+          <Button transparent noPadding>
+            <XIcon className="icon" />
           </Button>
         </CloseButtonContainer>
         {children}
