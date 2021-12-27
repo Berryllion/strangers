@@ -45,7 +45,7 @@ const ClickingSides = styled.div`
     }
   }
 
-  @media (max-width: 640px) {
+  @media (max-width: 700px) {
     min-width: 2.5rem;
 
     > * {
@@ -70,8 +70,14 @@ const GameInfo = styled.div`
     padding-top: .8rem;
   }
 
-  @media (max-width: 640px) {
+  @media (max-width: 820px) {
     bottom: 2rem;
+  }
+  @media (max-height: 450px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
   }
 `;
 
@@ -218,7 +224,7 @@ const Home = () => {
   // TODO: debounce screen resize
   useClickOutside(menuRef, setShowMenu);
   useEffect(() => {
-    if (width > 640) {
+    if (width > 820) {
       setShowMenu(true);
     } else {
       setShowMenu(false);

@@ -11,7 +11,7 @@ const CardContainer = styled.div`
   z-index: 1;
 
   @media (max-width: 640px) {
-    margin: 0 2rem;
+    margin: 0 10%;
   }
 `;
 
@@ -29,9 +29,9 @@ const StyledCard = styled.div<{
   align-items: center;
   text-align: center;
   padding: 0 1.5rem;
+  min-height: 15rem;
   height: 30vh;
   width: 30rem;
-  max-width: 30rem;
   background-color: ${({ isWildcard, backgroundColor }) => {
     return isWildcard ? backgroundColor : "#fff";
   }};
@@ -55,18 +55,16 @@ const StyledCard = styled.div<{
     user-select: none;
   }
 
-  @media (max-width: 640px) {
+  @media (max-width: 820px) {
+    width: 25rem;
+
     h4 {
-      font-size: .9rem;
+      font-size: 1.1rem;
     }
 
     h5 {
       font-size: .7rem;
     }
-
-    width: 100%;
-    min-width: 100%;
-    max-width: auto;
   }
 `;
 

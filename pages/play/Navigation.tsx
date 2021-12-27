@@ -22,6 +22,12 @@ const StyledNavigation = styled.div`
 
   ${Button} {
     padding: .5rem 1rem;
+    text-shadow: ${({ theme }) => `
+      -1px -1px 0 ${theme.backgroundColor},
+      1px -1px 0 ${theme.backgroundColor},
+      -1px 1px 0 ${theme.backgroundColor},
+      1px 1px 0 ${theme.backgroundColor}
+    `};
 
     :first-child {
       padding-left: 0;
@@ -31,7 +37,7 @@ const StyledNavigation = styled.div`
     }
   }
 
-  @media (max-width: 640px) {
+  @media (max-width: 820px) {
     padding: 2rem;
 
     .menuIcon {
@@ -49,7 +55,7 @@ const NavigationLinks = styled.div`
     color: ${({ theme }) => theme.textColor};
   }
 
-  @media (max-width: 640px) {
+  @media (max-width: 820px) {
     flex-direction: column;
     align-items: flex-end;
     position: absolute;
