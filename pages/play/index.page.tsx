@@ -14,6 +14,7 @@ import Navigation from "./Navigation";
 import Card from "./Card";
 import LevelModal from "./LevelModal";
 import InstructionsModal from "./InstructionsModal";
+import ThemeModal from "./ThemeModal";
 
 const StyledMain = styled(Main)`
   padding: 0;
@@ -87,6 +88,7 @@ const Home = () => {
 
   const [changingLevel, setChangingLevel] = useState(false);
   const [readingInstructions, setReadingInstructions] = useState(false);
+  const [changingTheme, setChangingTheme] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
 
   const selectedDecks = decks.selected;
@@ -218,7 +220,6 @@ const Home = () => {
       setShowMenu(false);
     }
   }, [width]);
-// console.log(game.cards)
 
   if (selectedDecks.length === 0) {
     return (
@@ -240,6 +241,7 @@ const Home = () => {
         showMenu={showMenu}
         setChangingLevel={setChangingLevel}
         setReadingInstructions={setReadingInstructions}
+        setChangingTheme={setChangingTheme}
         setShowMenu={setShowMenu}
       />
 
@@ -291,6 +293,10 @@ const Home = () => {
           currentLevel={currentLevel}
           setLevel={setLevel}
           // decksAvailable={decksAvailable}
+        />
+        <ThemeModal
+          changingTheme={changingTheme}
+          setChangingTheme={setChangingTheme}
         />
       </StyledMain>
     </>

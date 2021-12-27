@@ -2,9 +2,6 @@ import styled from "styled-components";
 import { Menu as MenuIcon } from 'react-feather';
 
 import { Button } from "../../designSystem/input/Button";
-import { useDispatch } from "react-redux";
-import { SET_THEME } from "../../redux/actions/theme";
-import { useState } from "react";
 
 const StyledNavigation = styled.div`
   position: fixed;
@@ -77,39 +74,10 @@ const StyledButton = styled(Button)`
 const Navigation = ({
   showMenu,
   setChangingLevel,
+  setReadingInstructions,
+  setChangingTheme,
   setShowMenu,
-  setReadingInstructions
 }) => {
-  const dispatch = useDispatch();
-
-  const [theme, setTheme] = useState("red");
-
-  const allThemes = require("../../utils/theme.json");
-
-  const getNextTheme = () => {
-    switch (theme) {
-      case "red":
-        return "white";
-      case "white":
-        return "black";
-      case "black":
-        return "red";
-      default:
-        return "red";
-    }
-  }
-
-  const changeTheme = () => {
-    let newThemeName = getNextTheme();
-    let newTheme = allThemes[newThemeName];
-
-    dispatch({
-      type: SET_THEME,
-      payload: newTheme,
-    });
-    setTheme(newThemeName);
-  }
-
   return (
     <StyledNavigation>
       <StyledButton transparent>
@@ -124,8 +92,8 @@ const Navigation = ({
           Change level
         </Button>
         <div className="separator">/</div>
-        <Button transparent onClick={() => changeTheme()}>
-          {`${getNextTheme()} theme`}
+        <Button transparent onClick={() => setChangingTheme(true)}>
+          Change theme
         </Button>
       </NavigationLinks>}
       <MenuIcon className="menuIcon" onClick={() => setShowMenu(!showMenu)} />

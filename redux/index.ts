@@ -54,6 +54,7 @@ export interface ReduxState {
   },
   theme: {
     currentTheme: Object,
+    previousTheme: Object,
   }
 }
 
@@ -112,6 +113,7 @@ export const initialState: ReduxState = {
   },
   theme: {
     currentTheme: redTheme,
+    previousTheme: redTheme,
   }
 };
 

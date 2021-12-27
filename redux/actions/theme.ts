@@ -17,6 +17,7 @@ export function setTheme(state: ReduxState, action: SetThemeAction): ReduxState 
     ...state,
     theme: {
       currentTheme: action.payload,
+      previousTheme: state.theme.currentTheme,
     }
   };
 }
