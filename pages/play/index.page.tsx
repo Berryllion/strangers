@@ -56,7 +56,7 @@ const ClickingSides = styled.div`
 
 const GameInfo = styled.div`
   position: absolute;
-  bottom: 5%;
+  bottom: 3rem;
   left: 0;
   right: 0;
   text-align: center;
@@ -68,6 +68,10 @@ const GameInfo = styled.div`
   }
   > *:last-child {
     padding-top: .8rem;
+  }
+
+  @media (max-width: 640px) {
+    bottom: 2rem;
   }
 `;
 

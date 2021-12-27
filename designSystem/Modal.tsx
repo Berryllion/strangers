@@ -46,10 +46,21 @@ const Content = styled.div`
   position: relative;
   background-color: var(--primary);
   color: #fff;
-  margin: auto;
+  margin: 3rem auto;
   padding: 5rem;
   width: 50%;
   overflow: auto;
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 20px;
+  }
 
   @media(max-width: 640px) {
     padding: 8%;

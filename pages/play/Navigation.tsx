@@ -8,7 +8,7 @@ const StyledNavigation = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  padding: 5%;
+  padding: 3rem;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -32,6 +32,8 @@ const StyledNavigation = styled.div`
   }
 
   @media (max-width: 640px) {
+    padding: 2rem;
+
     .menuIcon {
       display: block;
     }

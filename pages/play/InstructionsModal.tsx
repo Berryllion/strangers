@@ -19,8 +19,13 @@ const InstructionsModal = ({
       {readingInstructions && (
         <Modal onClose={() => setReadingInstructions(false)}>
           <h2>How to Play</h2>
-          <p>Pick a card. Read it out loud to your partner(s) and listen to their answer.</p>
-          <p>When you feel ready, you can go to the next level.</p>
+          <LevelInstructions>2 players</LevelInstructions>
+          <p>Pick a card. Read it out loud to your partner and listen to their answer.</p>
+          <LevelInstructions>+3 players</LevelInstructions>
+          <p>Pick a card. Read it out loud to a player of your choice and listen to their answer.</p>
+          <p>You may not select a player that has just answered a question.</p>
+          <br />
+          <p>When everyone feels ready, you can go to the next level.</p>
           <br />
           <h2>Levels</h2>
           {levels.map((level, levelIndex) => (
