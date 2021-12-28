@@ -25,7 +25,7 @@ export const Overlay = styled.div<{
   height: 100vh;
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.9);
-  z-index: 4;
+  z-index: 5;
 `;
 
 const CloseButtonContainer = styled.div<{
@@ -39,7 +39,7 @@ const CloseButtonContainer = styled.div<{
 
   > ${Button} {
     padding: .5rem 1rem;
-    color: ${({ theme, isWildcard, chosenTheme }) => isWildcard
+    color: ${({ theme, isWildcard, chosenTheme }) => isWildcard && chosenTheme !== "red"
       ? allThemes[chosenTheme].textColor
       : theme.textColor
     };
@@ -61,7 +61,7 @@ const Content = styled.div<{
     ? "transparent"
     : theme.backgroundColor
   };
-  color: ${({ theme, isWildcard, chosenTheme }) => isWildcard
+  color: ${({ theme, isWildcard, chosenTheme }) => isWildcard && chosenTheme !== "red"
     ? allThemes[chosenTheme].textColor
     : theme.textColor
   };

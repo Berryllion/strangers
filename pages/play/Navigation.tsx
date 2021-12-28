@@ -28,6 +28,7 @@ const StyledNavigation = styled.div`
       -1px 1px 0 ${theme.backgroundColor},
       1px 1px 0 ${theme.backgroundColor}
     `};
+    transition: text-shadow 0.5s ease-out;
 
     :first-child {
       padding-left: 0;
