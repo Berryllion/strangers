@@ -1,14 +1,14 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useDispatch } from "react-redux";
 import styled from "styled-components";
 
 import { SET_THEME_IS_WILDCARD } from "../../redux/actions/theme";
+import { getWindowResize, useMousePosition } from "../../utils/hooks";
 
 const CardContainer = styled.div`
   display: flex;
   align-items: center;
-  margin: 0;
-  z-index: 1;
+  margin: 0 auto;
 
   @media (max-width: 640px) {
     margin: 0 10%;
@@ -43,7 +43,7 @@ const StyledCard = styled.div<{
   text-transform: uppercase;
   // box-shadow from https://github.com/jonathan-lph/wnrs
   box-shadow: 0px 3px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
-  transition: color 0.5s ease-out, background-color 0.5s ease-out;
+  transition: color 0.5s ease-out, background-color 0.5s ease-out, transform 0.5s ease-out;
 
   h4 {
     font-size: 1.2rem;
@@ -69,7 +69,11 @@ const StyledCard = styled.div<{
 `;
 
 const Card = ({ currentLevel, currentCard, allCards, decksAvailable }) => {
+  const cardRef = useRef<HTMLDivElement>(null);
+  const cardAndLevelRef = useRef({ currentLevel, currentCard });
   const dispatch = useDispatch();
+  const mousePos = useMousePosition();
+  const windowSize = getWindowResize();
 
   const cardInfo = allCards[currentLevel][currentCard];
   const isWildcard = cardInfo ? cardInfo.card.startsWith("Wild Card") : false;
@@ -92,6 +96,34 @@ const Card = ({ currentLevel, currentCard, allCards, decksAvailable }) => {
       });
     }
   }, [isWildcard]);
+
+  useEffect(() => {
+    if (cardAndLevelRef.current.currentCard !== currentCard || cardAndLevelRef.current.currentLevel !== currentLevel) {
+      cardAndLevelRef.current = {
+        currentCard,
+        currentLevel,
+      };
+      if (cardRef.current) {
+        cardRef.current.style.transform = `
+          perspective(600px)
+          rotateY(0deg)
+          rotateX(0deg)
+        `;
+      }
+    } else if (cardRef.current) {
+      const cardBoundingRect = cardRef.current.getBoundingClientRect();
+      let { x: cardX, y: cardY } = cardBoundingRect;
+      cardX += cardBoundingRect.width / 2;
+      cardY += cardBoundingRect.height / 2;
+      const { x: mouseX, y: mouseY } = mousePos;
+
+      cardRef.current.style.transform = `
+        perspective(600px)
+        rotateY(${((cardX - mouseX) / windowSize.width) * -30}deg)
+        rotateX(${((cardY - mouseY) / windowSize.height) * 30}deg)
+      `;
+    }
+  }, [mousePos]);
 
   if (allCards.length === 0 || !question) return null;
 
@@ -123,6 +155,7 @@ const Card = ({ currentLevel, currentCard, allCards, decksAvailable }) => {
   return (
     <CardContainer>
       <StyledCard
+        ref={cardRef}
         isWildcard={isWildcard}
         textColor={textColor}
         backgroundColor={backgroundColor || mainBackgroundColor}

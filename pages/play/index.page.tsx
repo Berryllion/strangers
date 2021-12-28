@@ -221,7 +221,6 @@ const Home = () => {
     }
   }, [decksAvailable]);
 
-  // TODO: debounce screen resize
   useClickOutside(menuRef, setShowMenu);
   useEffect(() => {
     if (width > 820) {
