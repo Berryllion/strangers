@@ -59,11 +59,10 @@ const Players = () => {
     event.preventDefault();
 
     if (newPlayer !== "") {
-      const tmpPlayer = [...players];
-      tmpPlayer.push(newPlayer);
+      const tmpPlayers = [...players, newPlayer];
 
       setNewPlayer("");
-      setPlayers(tmpPlayer);
+      setPlayers(tmpPlayers);
     }
   }
 
@@ -77,9 +76,16 @@ const Players = () => {
   const goToNextPage = () => {
     if (playersNb === 0) return;
 
+    const tmpPlayers = [...players];
+    if (newPlayer !== "") {
+      tmpPlayers.push(newPlayer);
+
+      setPlayers(tmpPlayers);
+    }
+
     dispatch({
       type: SET_PLAYERS,
-      payload: players,
+      payload: tmpPlayers,
     });
     router.push("/decks");
   }

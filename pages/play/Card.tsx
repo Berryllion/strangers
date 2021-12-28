@@ -80,8 +80,6 @@ const Card = ({ currentLevel, currentCard, allCards, decksAvailable }) => {
     question = question.replace("Wild Card", "");
 
   useEffect(() => {
-    const { white: whiteTheme } = require("../../utils/theme.json");
-
     if (isWildcard) {
       dispatch({
         type: SET_THEME_IS_WILDCARD,
