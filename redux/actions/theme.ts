@@ -25,7 +25,7 @@ export function setTheme(state: ReduxState, action: SetThemeAction): ReduxState 
     theme: {
       ...state.theme,
       chosenTheme: action.payload,
-      currentTheme: state.theme.isWildcard
+      currentTheme: state.theme.isWildcard && action.payload === state.theme.chosenTheme
         ? state.theme.currentTheme
         : allThemes[action.payload],
     }
@@ -37,7 +37,7 @@ export function SetThemeIsWildcard(state: ReduxState, action: SetThemeIsWildcard
     theme: {
       ...state.theme,
       isWildcard: action.payload,
-      currentTheme: action.payload
+      currentTheme: action.payload && state.theme.chosenTheme !== "black"
         ? allThemes["white"]
         : allThemes[state.theme.chosenTheme],
     }

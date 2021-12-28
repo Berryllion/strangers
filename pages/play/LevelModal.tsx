@@ -1,20 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
-import { Button } from "../../designSystem/input/Button";
+import { ChoiceButton } from "../../designSystem/input/Button";
 import Modal from "../../designSystem/Modal";
-
-const LevelsButton = styled(Button)<{ selected: boolean }>`
-  border: 2px solid #fff;
-  background-color: ${({ selected }) => selected ? "#fff" : "var(--primary)"};
-  color: ${({ selected }) => selected ? "var(--primary)" : "#fff"};
-  padding: 1rem;
-  width: 80%;
-
-  :not(:first-child) {
-    margin-top: 1rem;
-  }
-`;
+import { ReduxState } from "../../redux";
 
 const Container = styled.div`
   display: flex;
@@ -70,15 +59,15 @@ const LevelModal = ({
         <Modal onClose={() => setChangingLevel(false)}>
           <Container>
             {nbLevelArray.map(nb => (
-              <LevelsButton
-                selected={nb === currentLevel}
+              <ChoiceButton
                 key={nb}
+                selected={nb === currentLevel}
                 onClick={() => setLevel(nb)}
               >
                 {nb !== 3
                 ? <>Level {nb + 1}</>
                 : "Final Card"}
-              </LevelsButton>
+              </ChoiceButton>
             ))}
           </Container>
         </Modal>

@@ -29,7 +29,7 @@ const StyledCard = styled.div<{
   align-items: center;
   text-align: center;
   padding: 0 1.5rem;
-  min-height: 15rem;
+  min-height: 16rem;
   height: 30vh;
   width: 30rem;
   background-color: ${({ isWildcard, backgroundColor }) => {

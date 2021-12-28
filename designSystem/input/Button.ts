@@ -50,3 +50,15 @@ export const ContinueButton = styled(Button)`
     right: 5%;
   }
 `;
+
+export const ChoiceButton = styled(Button)<{ selected: boolean }>`
+  border: 2px solid ${({ theme }) => theme.textColor};
+  background-color: ${({ theme, selected }) => selected ? theme.textColor : "transparent"};
+  color: ${({ theme, selected }) => selected ? theme.backgroundColor : theme.textColor};
+  padding: 1rem;
+  width: 80%;
+
+  :not(:first-child) {
+    margin-top: 1rem;
+  }
+`;

@@ -4,13 +4,17 @@ import { X as XIcon } from 'react-feather';
 
 import { useClickOutside } from '../utils/hooks';
 import { Button } from './input/Button';
+import { useSelector } from 'react-redux';
+import { ReduxState } from '../redux';
 
-type ModalProps = {
-  children?: JSX.Element[] | JSX.Element | string,
-  onClose: () => void,
-};
+const allThemes = require("../utils/theme.json");
 
-export const Overlay = styled.div`
+export const Overlay = styled.div<{
+  isWildcard: boolean,
+  currentTheme: {
+    textColor: string,
+  },
+}>`
   position: fixed;
   left: 0;
   top: 0;
@@ -20,11 +24,14 @@ export const Overlay = styled.div`
   flex-direction: column;
   height: 100vh;
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
   z-index: 4;
 `;
 
-const CloseButtonContainer = styled.div`
+const CloseButtonContainer = styled.div<{
+  chosenTheme: string,
+  isWildcard: boolean,
+}>`
   position: absolute;
   padding: 5%;
   top: 0;
@@ -32,7 +39,10 @@ const CloseButtonContainer = styled.div`
 
   > ${Button} {
     padding: .5rem 1rem;
-    color: #fff;
+    color: ${({ theme, isWildcard, chosenTheme }) => isWildcard
+      ? allThemes[chosenTheme].textColor
+      : theme.textColor
+    };
   }
 
   @media (max-width: 640px) {
@@ -42,10 +52,19 @@ const CloseButtonContainer = styled.div`
   }
 `;
 
-const Content = styled.div`
+const Content = styled.div<{
+  chosenTheme: string,
+  isWildcard: boolean,
+}>`
   position: relative;
-  background-color: var(--primary);
-  color: #fff;
+  background-color: ${({ theme, chosenTheme }) => chosenTheme === "black"
+    ? "transparent"
+    : theme.backgroundColor
+  };
+  color: ${({ theme, isWildcard, chosenTheme }) => isWildcard
+    ? allThemes[chosenTheme].textColor
+    : theme.textColor
+  };
   margin: 3rem auto;
   padding: 5rem;
   width: 50%;
@@ -58,7 +77,10 @@ const Content = styled.div`
     background: transparent;
   }
   ::-webkit-scrollbar-thumb {
-    background-color: #fff;
+    background-color: ${({ theme, isWildcard, chosenTheme }) => isWildcard
+      ? allThemes[chosenTheme].textColor
+      : theme.textColor
+    };
     border-radius: 20px;
   }
 
@@ -68,18 +90,35 @@ const Content = styled.div`
   }
 `;
 
+type ModalProps = {
+  children?: JSX.Element[] | JSX.Element | string,
+  onClose: () => void,
+};
+
 const Modal = ({
   children,
   onClose,
 }: ModalProps) => {
   const modalContentRef = useRef(null);
+  const chosenTheme = useSelector((state: ReduxState) => state.theme.chosenTheme);
+  const isWildcard = useSelector((state: ReduxState) => state.theme.isWildcard);
+
+  const currentTheme = allThemes[chosenTheme];
 
   useClickOutside(modalContentRef, onClose);
 
   return (
-    <Overlay>
-      <Content ref={modalContentRef}>
-        <CloseButtonContainer onClick={onClose}>
+    <Overlay isWildcard={isWildcard} currentTheme={currentTheme}>
+      <Content
+        ref={modalContentRef}
+        isWildcard={isWildcard}
+        chosenTheme={chosenTheme}
+      >
+        <CloseButtonContainer
+          onClick={onClose}
+          isWildcard={isWildcard}
+          chosenTheme={chosenTheme}
+        >
           <Button transparent noPadding>
             <XIcon className="icon" />
           </Button>

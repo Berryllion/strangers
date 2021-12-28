@@ -2,21 +2,9 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import styled from "styled-components";
 
-import { Button } from "../../designSystem/input/Button";
+import { ChoiceButton } from "../../designSystem/input/Button";
 import Modal from "../../designSystem/Modal";
 import { SET_THEME } from "../../redux/actions/theme";
-
-const LevelsButton = styled(Button)<{ selected: boolean }>`
-  border: 2px solid #fff;
-  background-color: ${({ selected }) => selected ? "#fff" : "var(--primary)"};
-  color: ${({ selected }) => selected ? "var(--primary)" : "#fff"};
-  padding: 1rem;
-  width: 80%;
-
-  :not(:first-child) {
-    margin-top: 1rem;
-  }
-`;
 
 const Container = styled.div`
   display: flex;
@@ -48,13 +36,13 @@ const ThemeModal = ({
         <Modal onClose={() => setChangingTheme(false)}>
           <Container>
             {Object.keys(allThemes).map(theme => (
-              <LevelsButton
-                selected={theme === currentTheme}
+              <ChoiceButton
                 key={theme}
+                selected={theme === currentTheme}
                 onClick={() => changeTheme(theme)}
               >
                 {theme} theme
-              </LevelsButton>
+              </ChoiceButton>
             ))}
           </Container>
         </Modal>
