@@ -77,7 +77,7 @@ const Content = styled.div<{
     background: transparent;
   }
   ::-webkit-scrollbar-thumb {
-    background-color: ${({ theme, isWildcard, chosenTheme }) => isWildcard
+    background-color: ${({ theme, isWildcard, chosenTheme }) => isWildcard && chosenTheme !== "red"
       ? allThemes[chosenTheme].textColor
       : theme.textColor
     };

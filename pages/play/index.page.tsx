@@ -49,7 +49,12 @@ const ClickingSides = styled.div`
     min-width: 2.5rem;
 
     > * {
-      display: none;
+      margin-left: .5rem;
+    }
+    :last-of-type {
+      > * {
+        margin-right: .5rem;
+      }
     }
   }
 `;
