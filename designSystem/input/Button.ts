@@ -57,8 +57,9 @@ export const ChoiceButton = styled(Button)<{ selected: boolean }>`
   color: ${({ theme, selected }) => selected ? theme.backgroundColor : theme.textColor};
   padding: 1rem;
   width: 80%;
+  transition: all 0.14s ease-out;
 
-  :not(:first-child) {
-    margin-top: 1rem;
+  :nth-of-type(1n + 2) {
+    margin-top: 1.5rem;
   }
 `;

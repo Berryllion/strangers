@@ -6,10 +6,15 @@ import { useRouter } from "next/dist/client/router";
 
 import Main from "../../designSystem/Main";
 import Error from "../../designSystem/Error";
-import { Button } from "../../designSystem/input/Button";
+import { Button, ChoiceButton } from "../../designSystem/input/Button";
 import { ReduxState } from "../../redux";
 import { SET_SELECTED_DECKS } from "../../redux/actions/selectedDecks";
-import { SET_CARDS_AVAILABLE, SET_CURRENT_CARD, SET_CURRENT_PLAYER, SET_GAME_LEVEL } from "../../redux/actions/game";
+import {
+  SET_CARDS_AVAILABLE,
+  SET_CURRENT_CARD,
+  SET_CURRENT_PLAYER,
+  SET_GAME_LEVEL
+} from "../../redux/actions/game";
 
 const StyledMain = styled(Main)`
   position: relative;
@@ -18,42 +23,19 @@ const StyledMain = styled(Main)`
   overflow: auto;
   height: auto;
   display: flex;
-`;
 
-const DeckContainer = styled.div`
-  display: flex;
-  align-items: center;
-  padding: .1rem 0;
-
-  > ${Button} {
-    background-color: transparent;
-    color: #fff;
-    border: 2px solid #fff;
-    width: 100%;
-  }
-
-  :not(:first-child) {
-    margin-top: 1rem;
+  > h2 {
+    margin-bottom: 3rem;
   }
 `;
 
-const StyledDeckButton = styled(Button)<{ selected: boolean }>`
-  && {
-    background-color: ${({ selected }) => selected ? "#fff" : "transparent"};
-    color: ${({ selected }) => selected ? "var(--primary)" : "#fff"};
+const StyledChoiceButton = styled(ChoiceButton)`
+  width: 100%;
 
-    > p {
-      font-size: .8rem;
-      text-transform: initial;
-
-      :hover {
-        text-decoration: none !important;
-      }
-
-      :last-child {
-        margin-bottom: 0;
-      }
-    }
+  > p {
+    margin: 1rem 0 0 0;
+    text-transform: initial;
+    font-weight: normal;
   }
 `;
 
@@ -119,15 +101,15 @@ const Home = () => {
 
   const DeckButton = ({ deck }) => {
     return (
-      <DeckContainer key={deck.name}>
-        <StyledDeckButton
-          onClick={() => onClickDeck(deck.menu)}
-          selected={selectedDecks.find(d => d === deck.menu) !== undefined}
-        >
-          {deck.menu}<br />
-          {deck["back-description"].map((d, i) => <p key={i}>{d}</p>)}
-        </StyledDeckButton>
-      </DeckContainer>
+      <StyledChoiceButton
+        onClick={() => onClickDeck(deck.menu)}
+        selected={selectedDecks.find(d => d === deck.menu) !== undefined}
+      >
+        {deck.menu}<br />
+        {deck["back-description"].map((d, i) => (
+          <p key={i}>{d}</p>
+        ))}
+      </StyledChoiceButton>
     )
   }
 
